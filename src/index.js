@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import App from "./components/App";
 import { Provider } from "react-redux";
@@ -14,5 +13,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-reportWebVitals();
