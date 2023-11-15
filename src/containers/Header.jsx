@@ -9,18 +9,17 @@ export default function Header() {
     const [showHeader, setShowHeader] = useState(true);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset;
-            setShowHeader(
-                (prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 50) ||
-                currentScrollPos < 10
-            );
+    const handleScroll = () => {
+        window.requestAnimationFrame(() => {
+            const currentScrollPos = window.scrollY;
+            const show = prevScrollPos > currentScrollPos || currentScrollPos < 10;
             setPrevScrollPos(currentScrollPos);
-        };
+            setShowHeader(show);
+        });
+    };
 
+    useEffect(() => {
         window.addEventListener("scroll", handleScroll);
-
         return () => window.removeEventListener("scroll", handleScroll);
     }, [prevScrollPos]);
 

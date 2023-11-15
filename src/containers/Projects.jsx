@@ -1,14 +1,10 @@
 import React from 'react';
-import ProjectCard from './ProjectCard';
+import TitleComponent from '../components/TitleComponent';
 
-const Projects = ({ projects }) => {
+export default function Projects() {
     return (
-        <div className="projects">
-            {projects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-            ))}
-        </div>
+        <>
+            <TitleComponent title="Projects" />
+        </>
     );
 };
-
-export default Projects;
