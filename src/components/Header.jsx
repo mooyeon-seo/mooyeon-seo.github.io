@@ -11,7 +11,7 @@ export default function Header() {
         <AppBar position="static" color={isDarkMode ? "default" : "primary"} >
             <Toolbar style={{ justifyContent: "space-between" }}>
                 <div style={{ display: "flex", alignItems: "center" }}>
-                    <Typography variant="h6">Mooyeon Seo</Typography>
+                    <Typography variant="h6" style={{ fontStyle: "italic" }}>Mooyeon Seo</Typography>
                 </div>
                 <div style={{ display: "flex", alignItems: "center" }}>
                     <Button color="inherit" href="#">

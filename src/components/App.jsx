@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./Header";
-import About from "./About";
 // import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -10,9 +9,8 @@ export default function App() {
   return (
     <>
       <Header />
-      <About />
-      <Education />
       {/* <Projects /> */}
+      <Education />      
       <Contact />
       <Footer />
     </>
