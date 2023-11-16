@@ -1,10 +1,12 @@
 import React from 'react';
-import TitleComponent from '../components/TitleComponent';
+import Title from '../components/Title';
+import Work from "../components/Work";
 
 export default function Projects() {
     return (
         <>
-            <TitleComponent title="Projects" />
+            <Title title="Project" />
+            <Work />
         </>
     );
 };

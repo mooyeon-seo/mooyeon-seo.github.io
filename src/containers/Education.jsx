@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Typography, Container, Grid, Paper } from '@material-ui/core';
-import TitleComponent from '../components/TitleComponent';
-
+// Import Components
+import Description from '../components/Description';
+import Title from '../components/Title';
+import Card from '../components/Card';
 const useStyles = makeStyles((theme) => ({
     education: {
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: theme.palette.background.default,
         padding: theme.spacing(8, 0, 6),
     },
     educationItem: {
@@ -25,12 +27,16 @@ const useStyles = makeStyles((theme) => ({
         height: 'auto',
         maxWidth: '300px',
     },
+    container: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
 }));
 
 export default function Education() {
     const isDarkMode = useSelector((state) => state.dark.isDark);
-    const classes = useStyles();
-
+    
     const theme = React.useMemo(
         () =>
             createMuiTheme({
@@ -41,37 +47,13 @@ export default function Education() {
         [isDarkMode],
     );
 
-    useEffect(() => {
-        console.log(`dark mode = ${isDarkMode} in education`);
-    });
-
     return (
         <ThemeProvider theme={theme}>
-            <div className={classes.education}>
-                <Container maxWidth="md">
-                    <TitleComponent title="Education" />
-                    <Grid container spacing={4}>
-                        <Grid item xs={12} sm={6} md={4}>
-                            <Paper className={classes.educationItem}>
-                                <img src="/assets/uw_seal.png" alt="University of Waterloo Seal" className={classes.educationImage} />
-                                <Typography variant="h5" component="h3" className={classes.educationDegree}>
-                                    Bachelor of Science in Computer Science
-                                </Typography>
-                                <Typography variant="subtitle1" component="p" className={classes.educationSchool}>
-                                    University of Waterloo
-                                </Typography>
-                            </Paper>
-                        </Grid>
-                        <Grid item xs={12} sm={6} md={8}>
-                            <Paper className={classes.educationAchievements}>
-                                <Typography variant="h5" component="h3" className={classes.educationDegree}>
-                                    Received 99 out of 100 on the final grade of CS 350 (Operating Systems)
-                                </Typography>
-                            </Paper>
-                        </Grid>
-                    </Grid>
-                </Container>
-            </div>
+            <Container>
+                <Title title="Education" />
+                <Card title="University of Waterloo, Honours BSc" subtitle="Computer Science" description="University of Waterloo Seal" link="assets/uw_seal.png"></Card>
+                <Description title="I am awesome" subtitle="I am awesome" description="I am awesome" />
+            </Container>
         </ThemeProvider>
     );
 };

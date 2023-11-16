@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppBar, Toolbar, Typography, Button, FormControlLabel, Switch } from "@material-ui/core";
 import { toggleTheme } from "../stores/darkStore";
-
+import Link from "../components/Link";
 export default function Header() {
     const dispatch = useDispatch();
     const isDarkMode = useSelector((state) => state.dark.isDark);
@@ -30,15 +30,11 @@ export default function Header() {
                     <Typography variant="h6" style={{ fontStyle: "italic" }}>Mooyeon Seo</Typography>
                 </div>
                 <div style={{ display: "flex", alignItems: "center" }}>
-                    <Button color="inherit" href="#">
-                        Education
-                    </Button>
-                    <Button color="inherit" href="#">
-                        Projects
-                    </Button>
-                    <Button color="inherit" href="#">
-                        Work Experience
-                    </Button>
+                    <Link title="Education" link="#education" />
+                    <Link title="Projects" link="#Projects" />
+                    <Link title="Work Experience" link="#works" />
+                    <Link title="Contact" link="#contact" />
+                    
                     <FormControlLabel
                         control={
                             <Switch
