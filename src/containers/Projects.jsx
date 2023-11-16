@@ -6,7 +6,6 @@ export default function Projects() {
     return (
         <>
             <Title title="Project" />
-            <Work />
         </>
     );
 };

@@ -5,6 +5,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Education from "./Education";
+import Works from "./Works";
 import { createMuiTheme } from '@material-ui/core/styles';
 
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
         <Projects />
       </div>
       <Education />
+      <Works />
       <Contact />
       <Footer />
     </div>

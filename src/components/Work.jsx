@@ -1,10 +1,32 @@
-export default function Work({timeline, company, position, location, link, description}) {
+import "./Work.css";
+import React from "react";
+// import other components
+import TimeLine from "./Timeline";
+import Description from "./Description";
+
+export default function Work({
+  timeline,
+  company,
+  position,
+  location,
+  link,
+  descriptions,
+}) {
   return (
-    <li>
-      <div className="work">
-        <h3>{timeline}</h3>
-        
+    <div className="work">
+      <TimeLine timeline={timeline} location={location} />
+      <div>
+        <div>
+          <h3>{company}</h3>
+          <h4>{position}</h4>
+        </div>
+        <Description descriptions={descriptions} />
       </div>
-    </li>
+      <div>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          Visit {company}
+        </a>
+      </div>
+    </div>
   );
 }
