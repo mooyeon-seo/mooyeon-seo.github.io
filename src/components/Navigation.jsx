@@ -1,4 +1,4 @@
-import Link from "@material-ui/core/Link";
+import Link from "@mui/material/Link";
 
 export default function Navigation({title, link}) {
     return (

@@ -1,6 +1,6 @@
 import "./Work.css";
 import React from "react";
-import { Paper } from "@material-ui/core";
+import { Paper } from "@mui/material";
 // import other components
 import TimeLine from "./Timeline";
 import Description from "./Description";

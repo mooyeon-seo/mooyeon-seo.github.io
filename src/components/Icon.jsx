@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@mui/styles";
 
 const iconSize = 45;
 const useStyles = makeStyles((theme) => ({

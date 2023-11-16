@@ -1,25 +1,24 @@
 import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
-import Header from "./Header";
 import Projects from "./Projects";
 import Footer from "./Footer";
 import Education from "./Education";
 import Works from "./Works";
-import { createTheme } from "@material-ui/core/styles";
-import { ThemeProvider } from "@material-ui/styles";
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+import Skills from "./Skills";
 
 export default function App() {
   const theme = React.useMemo(
     () =>
       createTheme({
         palette: {
-          mode: isDarkMode ? "dark" : "light",
+          mode: "light",
         },
       }),
-    [isDarkMode]
+    []
   );
   useEffect(() => {
-    console.log(`dark mode = ${isDarkMode} in App`);
+    console.log(`dark mode = ${theme} in App`);
   });
 
   return (
@@ -27,6 +26,7 @@ export default function App() {
       <Projects />
       <Education />
       <Works />
+      <Skills />
       <Footer />
     </ThemeProvider>
   );

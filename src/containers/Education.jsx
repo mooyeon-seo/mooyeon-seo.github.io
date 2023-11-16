@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
+import { makeStyles } from "@mui/styles";
 // Import Components
 import Description from "../components/Description";
 import Title from "../components/Title";
@@ -16,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
   educationContent: {
     display: "grid",
     gridTemplateColumns: "1fr 4fr" /* set the width of the columns */,
+    padding: 10,
     gap: 5,
     "&:hover": {
       boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)" /* add box-shadow on hover */,
@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Education() {
-  const isDarkMode = useSelector((state) => state.dark.isDark);
   const classes = useStyles();
 
   return (
