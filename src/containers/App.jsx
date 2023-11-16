@@ -1,30 +1,31 @@
 import React, { useEffect } from "react";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 import Header from "./Header";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Education from "./Education";
 import Works from "./Works";
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
 
 export default function App() {
   const isDarkMode = useSelector((state) => state.dark.isDark);
   const theme = React.useMemo(
     () =>
-        createMuiTheme({
-            palette: {
-                type: isDarkMode ? 'dark' : 'light',
-            },
-        }),
-    [isDarkMode],
-) ;
+      createTheme({
+        palette: {
+          mode: isDarkMode ? "dark" : "light",
+        },
+      }),
+    [isDarkMode]
+  );
   useEffect(() => {
     console.log(`dark mode = ${isDarkMode} in App`);
-});
+  });
 
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Header />
       <div style={{ marginTop: "80px" }}>
         <Projects />
@@ -33,6 +34,6 @@ export default function App() {
       <Works />
       <Contact />
       <Footer />
-    </div>
+    </ThemeProvider>
   );
 }
