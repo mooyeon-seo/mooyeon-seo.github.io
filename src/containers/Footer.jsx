@@ -1,10 +1,25 @@
+import React from "react";
+import { Typography, Container, Grid, Paper } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import ContactMe from "../containers/ContactMe";  
 
-import React from 'react';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: "#f5f5f5",
+    padding: theme.spacing(3),
+    marginTop: theme.spacing(3),
+  },
+}));
 
 function Footer() {
+  const classes = useStyles();
+  
   return (
     <footer>
-      <p>This is the footer.</p>
+      <Paper className={classes.root}>
+        <ContactMe />
+      </Paper>
     </footer>
   );
 }

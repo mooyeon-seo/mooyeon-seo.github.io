@@ -4,6 +4,11 @@
     gap: 5px;
     margin: 10px;
     padding: 10px;
+    transition: box-shadow 0.3s ease-in-out; /* add transition effect */
+}
+
+.work:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* add box-shadow on hover */
 }
 
 .titleNavigation {

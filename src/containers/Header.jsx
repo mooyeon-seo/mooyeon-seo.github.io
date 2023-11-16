@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppBar, Toolbar, Typography, Button, FormControlLabel, Switch } from "@material-ui/core";
 import { toggleTheme } from "../stores/darkStore";
 import Navigation from "../components/Navigation";
+import Icon from "../components/Icon";
+
 export default function Header() {
     const dispatch = useDispatch();
     const isDarkMode = useSelector((state) => state.dark.isDark);
@@ -24,11 +26,14 @@ export default function Header() {
     }, [prevScrollPos]);
 
     return (
-        <AppBar position="fixed" color={isDarkMode ? "default" : "primary"} style={{ top: showHeader ? 0 : "-70px" }}>
-            <Toolbar style={{ justifyContent: "space-between" }}>
+        <AppBar position="fixed" color={isDarkMode ? "default" : "primary"} style={{ opacity: showHeader ? 1 : 0 }}>
+            <Toolbar style={{ justifyContent: "space-between", alignContent: "flex-start" }}>
                 <div style={{ display: "flex", alignItems: "center" }}>
                     <Typography variant="h6" style={{ fontStyle: "italic" }}>Mooyeon Seo</Typography>
+                    <Icon alt="GitHub Logo" link="https://github.com/mooyeon-seo" src ="/assets/github.png"/>
+                    <Icon alt="LinkedIn Logo" link="https://www.linkedin.com/in/brian-seo-316aa71b5/" src ="/assets/linkedin.png"/>
                 </div>
+                
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: "10px" }}>
                     <Navigation title="Education" link="#education"/>
                     <Navigation title="Projects" link="#Projects" />

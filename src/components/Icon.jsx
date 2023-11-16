@@ -1,8 +1,42 @@
-import { Typography, Grid, Paper } from "@material-ui/core";
-import "./Icon.css";
+import { makeStyles } from "@material-ui/core/styles";
 
-export default function Icon({ description, link }) {
+const iconSize = 45;
+const useStyles = makeStyles((theme) => ({
+  icon: {
+    "marginLeft": 15,
+    "&:hover img": {
+      boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
+    },
+  },
+}));
+
+export default function Icon({
+  alt,
+  src,
+  link,
+  width = iconSize,
+  height = iconSize,
+}) {
+  const classes = useStyles();
+
+  const renderIcon = (link) => {
+    if (link) {
+      return (
+        <a href={link} className={classes.icon}>
+          <img src={src} alt={alt} width={width} height={height} />
+        </a>
+      );
+    }
     return (
-        <img src={link} alt={description} className="card"/>
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className={classes.icon}
+      />
     );
+  };
+
+  return renderIcon(link);
 }

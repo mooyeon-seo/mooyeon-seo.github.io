@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import "./Education.css";
-import { Typography, Container, Grid, Paper } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 // Import Components
 import Description from "../components/Description";
 import Title from "../components/Title";
@@ -9,31 +8,55 @@ import Icon from "../components/Icon";
 import Navigation from "../components/Navigation";
 import Timeline from "../components/Timeline";
 
+const useStyles = makeStyles((theme) => ({
+  education: {
+    margin: 10,
+    padding: 10,
+  },
+  educationContent: {
+    display: "grid",
+    gridTemplateColumns: "1fr 4fr" /* set the width of the columns */,
+    gap: 5,
+    "&:hover": {
+      boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)" /* add box-shadow on hover */,
+    },
+  },
+  timelineContainer: {
+    display: "flex",
+    gap: 0,
+    justifyContent: "flex-start",
+  },
+  timeline: {
+    // your styles here
+  },
+  descriptionContainer: {
+    padding: "10px",
+    fontSize: "14px",
+    color: "#666",
+    gap: "10px",
+    display: "flex",
+    flexDirection: "column",
+    borderLeft: "1px solid #981616",
+  },
+}));
+
 export default function Education() {
   const isDarkMode = useSelector((state) => state.dark.isDark);
+  const classes = useStyles();
 
   return (
-    <Paper className="education">
+    <div className={classes.education}>
       <Title title="Education" />
-      <div className="educationContent">
-        <div style={{ display: "flex", gap: 0, justifyContent: "flex-start" }}>
-          <Timeline timeline="SEPTEMBER 2016 - AUGUST 2022" location="Waterloo, Ontario" />
-          <Icon
-            description="University of Waterloo Seal"
-            link="assets/uw_seal.png"
+      <div className={classes.educationContent}>
+        <div className={classes.timelineContainer}>
+          <Timeline
+            timeline="SEPTEMBER 2016 - AUGUST 2022"
+            location="Waterloo, Ontario"
+            className={classes.timeline}
           />
+          <Icon alt="University of Waterloo Seal" src="assets/uw_seal.png" />
         </div>
-        <div
-          style={{
-            padding: "10px",
-            fontSize: "14px",
-            color: "#666",
-            gap: "10px",
-            display: "flex",
-            flexDirection: "column",
-            borderLeft: "1px solid #981616",
-          }}
-        >
+        <div className={classes.descriptionContainer}>
           <Navigation title="University of Waterloo" link="" />
           <h4>Computer Science</h4>
           <Description
@@ -44,6 +67,6 @@ export default function Education() {
           />
         </div>
       </div>
-    </Paper>
+    </div>
   );
 }
