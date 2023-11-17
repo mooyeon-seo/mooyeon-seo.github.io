@@ -6,8 +6,8 @@ export default function RotatingSquare() {
 
     const styles = {
         body: {
-            width: "200px",
-            height: "200px",
+            width: "300px",
+            height: "300px",
             background: "linear-gradient(180deg, #ff008c 0%, rgb(211, 9, 225) 100%)",
             overflow: "hidden",
             padding: 0,
@@ -21,8 +21,8 @@ export default function RotatingSquare() {
             div: {
                 background: "white",
                 borderRadius: "30px",
-                width: "100px",
-                height: "100px",
+                width: "150px",
+                height: "150px",
             },
         },
         refresh: {
