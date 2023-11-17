@@ -2,7 +2,6 @@ import { Paper } from "@mui/material";
 import Title from "../components/Title";
 import Skill from "../components/Skill";
 
-
 export default function Skills() {
   const categories = {
     languages: {
@@ -10,38 +9,32 @@ export default function Skills() {
       skills: [
         "JavaScript",
         "Python",
-        "Java",
         "C",
         "C++",
         "HTML",
         "CSS",
-        "SQL",
         "Bash",
         "Swift",
-        "",
+        "PostgreSQL",
+        "MySql",
+        "MongoDB",
       ],
     },
     frameworks: {
       title: "Frameworks",
-      skills: ["React", "Node", "Express", "Redux", "Graph QL", "Bootstrap", "Material UI", "Tailwind CSS", "Jest", "Enzyme", "Mocha", "Chai", "Jasmine", "Cypress", "React Testing Library", "Jest"],
-    },
-    databases: {
-      title: "Databases",
-      skills: ["MySQL", "MongoDB"],
+      skills: [
+        "React",
+        "Node",
+        "Express",
+        "Redux",
+        "Bootstrap",
+        "MaterialUI",
+        "Jest",
+      ],
     },
     tools: {
       title: "Tools",
-      skills: [
-        "Git",
-        "GitHub",
-        "Docker",
-        "Netlify",
-        "Postman",
-        "VSCode",
-        "XCode",
-        "Android Studio",
-        "PostgreSQL",
-      ],
+      skills: ["Git", "GitHub", "Docker", "VSCode", "DigitalOcean"],
     },
     designs: {
       title: "Designs",
@@ -49,15 +42,21 @@ export default function Skills() {
     },
   };
   return (
-    <div >
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Title title="Skills" />
-      <Paper sx={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr" }}>
+      <section style={{ display: "grid", gridRow: "auto auto", gridTemplateColumns: "1fr 1fr" }}>
         <Skill category={categories.languages} />
         <Skill category={categories.frameworks} />
-        <Skill category={categories.databases} />
         <Skill category={categories.tools} />
         <Skill category={categories.designs} />
-      </Paper>
+      </section>
     </div>
   );
 }

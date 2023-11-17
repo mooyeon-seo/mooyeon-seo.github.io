@@ -32,8 +32,6 @@ const useStyles = makeStyles((theme) => ({
   },
   descriptionContainer: {
     padding: "10px",
-    fontSize: "14px",
-    color: "#666",
     gap: "10px",
     display: "flex",
     flexDirection: "column",

@@ -26,8 +26,8 @@ export default function App() {
       <Projects />
       <Education />
       <Works />
-      <Skills />
       <Footer />
+      <Skills />
     </ThemeProvider>
   );
 }

@@ -48,7 +48,8 @@ const projects = {
 export default function Projects() {    
     return (
         <>
-            <Title title="Project" />
+            <Title title="Project " />
+            
             <ProjectSection category="iOS Development" projects={projects.iOS} />            
             {/* <RotatingSquare/> */}
         </>
