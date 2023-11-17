@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
+import { motion } from "framer-motion";
 // Import Components
 import Description from "../components/Description";
 import Title from "../components/Title";
@@ -47,16 +48,16 @@ export default function Education() {
     <div className={classes.education}>
       <Title title="Education" />
       <div className={classes.educationContent}>
-        <div className={classes.timelineContainer}>
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.2 }} className={classes.timelineContainer}>
           <Timeline
             timeline="SEPTEMBER 2016 - AUGUST 2022"
             location="Waterloo, Ontario"
             className={classes.timeline}
           />
           <Icon alt="University of Waterloo Seal" src="assets/uw_seal.png" />
-        </div>
+        </motion.div>
         <div className={classes.descriptionContainer}>
-          <Navigation title="University of Waterloo" link="" />
+          <Navigation title={"University of Waterloo".toUpperCase()} link="" />
           <h4>Computer Science</h4>
           <Description
             descriptions={[

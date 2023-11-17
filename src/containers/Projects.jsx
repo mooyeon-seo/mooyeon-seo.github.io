@@ -1,10 +1,56 @@
 import React from 'react';
 import Title from '../components/Title';
+import RotatingSquare from "../components/RotatingSquare";
+import ProjectSection from '../components/ProjectSection';
 
-export default function Projects() {
+const projects = {
+    iOS: [
+        {
+            title: "Will It Rain?",
+            description: "Tells you if it will rain in the next hour at your current location. It had been published to the app store ",
+            link: "https://apps.apple.com/ca/app/will-it-rain/id6443710105",
+            backgroundImage: {
+                src: '/assets/project/willitrain.png',
+                alt: 'Will It Rain?'
+            },
+            images: [
+                // {
+                //     src: '/assets/project/willitrain.png',
+                //     alt: 'Will It Rain?'
+                // }
+            ]
+        },
+        {
+            title: "Basic To Do",
+            description: "Keeps track of your to do list. It had been published to the app store ",
+            link: "https://apps.apple.com/us/app/basic-to-do/id1662248997",
+            backgroundImage: {
+                src: '/assets/project/basicToDo.png',
+                alt: 'Basic To Do'
+            },
+            images: [
+            ]
+        },
+        {
+            title: "Sentinel",
+            description: "Prototype of parental control app, as part of an unpaid internship...",
+            link: "",
+            backgroundImage: {
+                src: '/assets/project/willitrain.png',
+                alt: 'Will It Rain?'
+            },
+            images: [
+            ]
+        }
+    ]
+}
+
+export default function Projects() {    
     return (
         <>
             <Title title="Project" />
+            <ProjectSection category="iOS Development" projects={projects.iOS} />            
+            {/* <RotatingSquare/> */}
         </>
     );
 };

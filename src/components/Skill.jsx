@@ -1,15 +1,20 @@
-import { Box, List, ListItem } from '@mui/material';
-import Typography from '@mui/material/Typography';
+import { Paper } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import { motion } from "framer-motion";
 
 export default function Skill({ category }) {
-    return (
-        <Box textAlign={"start"}>
-            <Typography level="h2">{category.title}</Typography>
-            <List>
-                {category.skills.map((skill, index) => (
-                    <ListItem key={index}>{skill}</ListItem>
-                ))}
-            </List>            
-        </Box>
-    )
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.4 }}
+    >
+      <Paper>
+        <Typography level="h3">{category.title}</Typography>
+        {category.skills.map((skill, index) => (
+          <Typography level="subtitle3">{skill}</Typography>
+        ))}
+      </Paper>
+    </motion.div>
+  );
 }

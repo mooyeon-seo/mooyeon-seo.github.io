@@ -3,45 +3,53 @@ import {
   Button,
   FormControl,
   FormLabel,
+  FormGroup,
   FormHelperText,
 } from "@mui/material";
+import { motion } from "framer-motion";
 import Title from "../components/Title";
 
 export default function ContactMe() {
   return (
-    <div className="contactMeContainer" style={{ margin: 10, padding: 10 }}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.2 }}
+      style={{ margin: 10, padding: 10 }}
+    >
+      <Title title="Contact Me" />
+      <FormHelperText id="my-helper-text" style={{ textAlign: "center" }}>
+          Thank you for reaching out! I will do my best to respond to your
+          message within 48 hours. I look forward to connecting with you soon!
+        </FormHelperText>
       <FormControl
         action="https://formsubmit.co/raspberrrysherbet.ca"
         method="POST"
         color="primary"
         fullWidth="true"
-      >
-        <Title title="Contact Me" />
-        <FormHelperText id="my-helper-text" style={{ textAlign: "center" }}>
-        Thank you for reaching out! I will do my best to respond to your message within 48 hours. I look forward to connecting with you soon!
-        </FormHelperText>
+      > 
         <div
           style={{ display: "flex", justifyContent: "space-evenly", gap: 15 }}
         >
-          <FormControl style={{ marginTop: 25 }} fullWidth="true">
+          <FormGroup style={{ marginTop: 25 }} fullWidth="true">
             <FormLabel>Email</FormLabel>
             <TextField type="email" name="email" required />
-          </FormControl>
+          </FormGroup>
 
-          <FormControl style={{ marginTop: 25 }} fullWidth="true">
+          <FormGroup style={{ marginTop: 25 }} fullWidth="true">
             <FormLabel>Name</FormLabel>
             <TextField type="name" name="name" required />
-          </FormControl>
+          </FormGroup>
         </div>
 
-        <FormControl style={{ marginTop: 25 }}>
+        <FormGroup style={{ marginTop: 25 }}>
           <FormLabel>Message</FormLabel>
           <TextField multiline="true" rows="3" maxRows={10} />
-        </FormControl>
+        </FormGroup>
         <Button type="submit" style={{ marginTop: 25 }}>
           Send
         </Button>
       </FormControl>
-    </div>
+    </motion.div>
   );
 }
