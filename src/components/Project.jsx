@@ -1,4 +1,4 @@
-import { Typography, Card, CardMedia, CardContent, Modal } from "@mui/material";
+import { Typography, Card, CardMedia, CardContent } from "@mui/material";
 import { makeStyles } from "@mui/styles"; // Import makeStyles from @mui/styles
 
 const useStyles = makeStyles({

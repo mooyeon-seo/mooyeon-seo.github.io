@@ -4,9 +4,7 @@ export default function Description({ descriptions }) {
     <>
       {descriptions &&
         descriptions.map((description) => (
-          <Typography variant="subtitle1" component="p">
-            {description}
-          </Typography>
+          <Typography variant="subtitle1">{description}</Typography>
         ))}
     </>
   );

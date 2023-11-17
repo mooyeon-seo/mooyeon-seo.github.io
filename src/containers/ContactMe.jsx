@@ -1,15 +1,38 @@
-import {
-  TextField,
-  Button,
-  FormControl,
-  FormLabel,
-  FormGroup,
-  FormHelperText,
-} from "@mui/material";
+import { Button, TextField, Snackbar } from "@mui/material";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Title from "../components/Title";
 
+const contactMeEndPoint = "https://formsubmit.co/a05cff5bd96d976661ee9f2de6570335";
+
 export default function ContactMe() {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSent, setIsSent] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const response = await fetch(contactMeEndPoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        message: message,
+        email: email,
+      }),
+    });
+    console.log(response);
+    setIsSent(true);
+  };
+
+  const handleClose = () => {
+    setIsSent(false);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -18,38 +41,42 @@ export default function ContactMe() {
       style={{ margin: 10, padding: 10 }}
     >
       <Title title="Contact Me" />
-      <FormHelperText id="my-helper-text" style={{ textAlign: "center" }}>
-          Thank you for reaching out! I will do my best to respond to your
-          message within 48 hours. I look forward to connecting with you soon!
-        </FormHelperText>
-      <FormControl
-        action="https://formsubmit.co/raspberrrysherbet.ca"
-        method="POST"
-        color="primary"
-        fullWidth="true"
-      > 
-        <div
-          style={{ display: "flex", justifyContent: "space-evenly", gap: 15 }}
-        >
-          <FormGroup style={{ marginTop: 25 }} fullWidth="true">
-            <FormLabel>Email</FormLabel>
-            <TextField type="email" name="email" required />
-          </FormGroup>
-
-          <FormGroup style={{ marginTop: 25 }} fullWidth="true">
-            <FormLabel>Name</FormLabel>
-            <TextField type="name" name="name" required />
-          </FormGroup>
-        </div>
-
-        <FormGroup style={{ marginTop: 25 }}>
-          <FormLabel>Message</FormLabel>
-          <TextField multiline="true" rows="3" maxRows={10} />
-        </FormGroup>
-        <Button type="submit" style={{ marginTop: 25 }}>
-          Send
+      <form
+        onSubmit={handleSubmit}
+        style={{ display: "flex", flexDirection: "column", gap: 10 }}
+      >
+        <TextField
+          label="Name"
+          variant="outlined"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <TextField
+          label="Email"
+          variant="outlined"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <TextField
+          label="Message"
+          variant="outlined"
+          multiline
+          rows={4}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+        <Button variant="contained" type="submit" onClick={(event) => {
+          handleSubmit(event);
+        }}>
+          Submit
         </Button>
-      </FormControl>
+      </form>
+      <Snackbar
+        open={isSent}
+        autoHideDuration={3000}
+        onClose={handleClose}
+        message="Email sent successfully!"
+      />
     </motion.div>
   );
 }

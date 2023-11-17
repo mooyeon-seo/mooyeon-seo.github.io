@@ -1,6 +1,7 @@
-import { Box } from "@mui/material";
+import { Paper } from "@mui/material";
 import Title from "../components/Title";
 import Skill from "../components/Skill";
+
 
 export default function Skills() {
   const categories = {
@@ -48,15 +49,15 @@ export default function Skills() {
     },
   };
   return (
-    <>
+    <div >
       <Title title="Skills" />
-      <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr", width: "100%", padding: 10 }}>
+      <Paper sx={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr" }}>
         <Skill category={categories.languages} />
         <Skill category={categories.frameworks} />
         <Skill category={categories.databases} />
         <Skill category={categories.tools} />
         <Skill category={categories.designs} />
-      </Box>
-    </>
+      </Paper>
+    </div>
   );
 }
