@@ -14,7 +14,7 @@ export default function Works() {
         location="North York, Ontario"
         link="https://www.raspberrysherbet.ca/"
         descriptions={[
-          "Developed a contaSingle-Page Application with a user-friendly UI",
+          "Developed a Single-Page Application with a user-friendly UI",
           "Set up secure and lightning-fast payment methods using Stripe",
           "Wrote 30+ Automated Tests for each feature to ensure high-quality",
         ]}

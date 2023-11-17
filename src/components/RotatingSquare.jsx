@@ -15,6 +15,7 @@ export default function RotatingSquare() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            borderRadius: "30px",
         },
         exampleContainer: {
             div: {

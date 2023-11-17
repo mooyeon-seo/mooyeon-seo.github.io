@@ -5,7 +5,7 @@ import Skill from "../components/Skill";
 export default function Skills() {
   const categories = {
     languages: {
-      title: "Languages",
+      title: "Language",
       skills: [
         "JavaScript",
         "Python",
@@ -21,7 +21,7 @@ export default function Skills() {
       ],
     },
     frameworks: {
-      title: "Frameworks",
+      title: "Framework",
       skills: [
         "React",
         "Node",
@@ -33,11 +33,11 @@ export default function Skills() {
       ],
     },
     tools: {
-      title: "Tools",
+      title: "Tool",
       skills: ["Git", "GitHub", "Docker", "VSCode", "DigitalOcean"],
     },
     designs: {
-      title: "Designs",
+      title: "Design",
       skills: ["Figma", "Procreate"],
     },
   };
@@ -50,7 +50,7 @@ export default function Skills() {
         alignItems: "center",
       }}
     >
-      <Title title="Skills" />
+      <Title title="Skill" />
       <section style={{ display: "grid", gridRow: "auto auto", gridTemplateColumns: "1fr 1fr" }}>
         <Skill category={categories.languages} />
         <Skill category={categories.frameworks} />
