@@ -123,6 +123,7 @@ export default function ContactMe() {
           type="submit"
           onClick={handleSubmit}
           color="success"
+          size="large"
         >
           <Typography variant="h5" sx={{ width: "max(60%, 150px)" }}>
             SEND ➤
