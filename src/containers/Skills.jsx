@@ -1,6 +1,7 @@
 import { Paper } from "@mui/material";
 import Title from "../components/Title";
 import Skill from "../components/Skill";
+import { motion } from "framer-motion";
 
 export default function Skills() {
   const categories = {
@@ -51,12 +52,24 @@ export default function Skills() {
       }}
     >
       <Title title="Skill" />
-      <section style={{ display: "grid", gridRow: "auto auto", gridTemplateColumns: "1fr 1fr" }}>
-        <Skill category={categories.languages} />
-        <Skill category={categories.frameworks} />
-        <Skill category={categories.tools} />
-        <Skill category={categories.designs} />
-      </section>
+      <motion.div
+        initial={{ x: -50 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 1.2 }}
+      >
+        <section
+          style={{
+            display: "grid",
+            gridRow: "auto auto",
+            gridTemplateColumns: "1fr 1fr",
+          }}
+        >
+          <Skill category={categories.languages} />
+          <Skill category={categories.frameworks} />
+          <Skill category={categories.tools} />
+          <Skill category={categories.designs} />
+        </section>
+      </motion.div>
     </div>
   );
 }

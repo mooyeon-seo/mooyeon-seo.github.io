@@ -18,8 +18,8 @@ export default function Work({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ x: -50 }}
+      whileInView={{ x: 0 }}
       transition={{ duration: 1.2 }}
     >
       <Paper className='work' >

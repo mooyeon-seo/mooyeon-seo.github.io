@@ -1,9 +1,4 @@
-import {
-  Button,
-  TextField,
-  Snackbar,
-  Typography,
-} from "@mui/material";
+import { Button, TextField, Snackbar, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Title from "../components/Title";
@@ -71,8 +66,8 @@ export default function ContactMe() {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ x: 50 }}
+      whileInView={{ x: 0 }}
       transition={{ duration: 1.2 }}
       style={{ width: "max(60%, 400px)", margin: "auto", marginBottom: "30px" }}
     >

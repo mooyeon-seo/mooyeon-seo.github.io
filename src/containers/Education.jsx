@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     gap: 5,
     "&:hover": {
-      boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)" /* add box-shadow on hover */,
+      boxShadow:
+        "0px 0px 10px rgba(0, 0, 0, 0.5)" /* add box-shadow on hover */,
     },
   },
   timelineContainer: {
@@ -45,15 +46,20 @@ export default function Education() {
   return (
     <div className={classes.education}>
       <Title title="Education" />
-      <div className={classes.educationContent}>
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.2 }} className={classes.timelineContainer}>
+      <motion.div className={classes.educationContent} initial={{ x: 50 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 1.2 }}>
+        <div
+          
+          className={classes.timelineContainer}
+        >
           <Timeline
             timeline="SEPTEMBER 2016 - AUGUST 2022"
             location="Waterloo, Ontario"
             className={classes.timeline}
           />
           <Icon alt="University of Waterloo Seal" src="assets/uw_seal.png" />
-        </motion.div>
+        </div>
         <div className={classes.descriptionContainer}>
           <Navigation title={"University of Waterloo".toUpperCase()} link="" />
           <h4>Computer Science</h4>
@@ -64,7 +70,7 @@ export default function Education() {
             ]}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
