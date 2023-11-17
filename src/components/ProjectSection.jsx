@@ -7,8 +7,8 @@ export default function ProjectSection({ category, projects }) {
     return (
         <div style={{ padding: 10, margin: 10 }}>
             {/* Heading for the project section */}
-            <Typography variant="h3" align="center">
-                {category.toUpperCase()}
+            <Typography variant="h4" align="center">
+                {category}
             </Typography>
             {/* list of projects */}
             <motion.div

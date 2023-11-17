@@ -50,7 +50,7 @@ export default function Projects() {
         <>
             <Title title="Project " />
             
-            <ProjectSection category="iOS Development" projects={projects.iOS} />            
+            <ProjectSection category="iOS DEVELOPMENT" projects={projects.iOS} />            
             {/* <RotatingSquare/> */}
         </>
     );
