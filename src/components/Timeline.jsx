@@ -1,5 +1,18 @@
 import Typography from "@mui/material/Typography";
-import "./Timeline.css";
+import { styled } from "@mui/system";
+
+const TimeLineSection = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  fontSize: 14,
+  gap: 10, /* add a gap between the timeline and the content */    
+  padding: 10,
+
+  "@media (max-width: 600px)": {
+    width: 300, /* adjust width for smallest screens */
+  }
+});
+
 export default function TimeLine({ timeline, location }) {
   return (
     <div className="timelineSection">

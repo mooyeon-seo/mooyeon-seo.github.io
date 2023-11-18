@@ -1,17 +1,18 @@
 import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
 import { styled } from "@mui/system"; // Import styled from @mui/system
+import { UI } from "../constants/ui"; // Import UI constants
 
 const SkillContainer = styled("div")({
   display: "flex",
   flexWrap: "wrap",
-  gap: 10,
+  gap: UI.gap,
   justifyContent: "center",
 });
 
 const StyledSkill = styled(motion.div)({
-  padding: 10,
-  margin: 10,
+  padding: UI.padding,
+  margin: UI.margin,
   borderRadius: 10,
   "&:hover": {
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)" /* add box-shadow on hover */,

@@ -4,6 +4,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { motion } from "framer-motion";
 import RotatingSquare from "../components/RotatingSquare";
+import { UI } from '../constants/ui';
 
 const HeroSection = styled("section")({
   height: "100vh",
@@ -11,21 +12,21 @@ const HeroSection = styled("section")({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  gap: 15,
+  gap: UI.gap,
 });
 
 const HeroContent = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  gap: 25,
+  gap: UI.gap,
 });
 
 const TextContainer = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  gap: 15,
+  gap: UI.gap,
 });
 
 const Arrow = styled("div")({

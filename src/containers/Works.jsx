@@ -1,11 +1,19 @@
-import './Works.css'
+import React from 'react';
+import { styled } from '@mui/system';
+import { UI } from '../constants/ui';
 
 import Title from "../components/Title";
 import Work from "../components/Work";
 
+const WorksContainer = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: UI.gap,
+});
+
 export default function Works() {
   return (
-    <div className="works">
+    <WorksContainer className="works">
       <Title title="Work Experience" />
       <Work
         timeline="AUGUST 2023 - PRESENT"
@@ -51,6 +59,6 @@ export default function Works() {
           "Gathered military intelligence from North Korean facilities within the DMZ and promptly delivered comprehensive reports to nearby division headquarters",
         ]}
       />
-    </div>
+    </WorksContainer>
   );
 }

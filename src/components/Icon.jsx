@@ -1,25 +1,25 @@
 import { styled } from "@mui/system";
+import { UI } from "../constants/ui";
 
-const iconSize = 45;
 
 const IconWrapper = styled("div")({
-  marginLeft: 15,
+  marginLeft: UI.margin,
   "&:hover img": {
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
   },
 });
 
 const IconImage = styled("img")({
-  width: (props) => props.width || iconSize,
-  height: (props) => props.height || iconSize,
+  width: (props) => props.width || UI.iconSize,
+  height: (props) => props.height || UI.iconSize,
 });
 
 export default function Icon({
   alt,
   src,
   link,
-  width = iconSize,
-  height = iconSize,
+  width = UI.iconSize,
+  height = UI.iconSize,
 }) {
   const renderIcon = (link) => {
     if (link) {

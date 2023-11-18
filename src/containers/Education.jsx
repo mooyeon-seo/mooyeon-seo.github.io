@@ -7,10 +7,12 @@ import Title from "../components/Title";
 import Icon from "../components/Icon";
 import Navigation from "../components/Navigation";
 import Timeline from "../components/Timeline";
+import { UI } from '../constants/ui';
+
 
 const EducationContainer = styled("div")({
-  margin: 10,
-  padding: 10,
+  margin: UI.margin,
+  padding: UI.padding,
 });
 
 const EducationContent = styled("div")(({ theme }) => ({
