@@ -116,9 +116,8 @@ export default function ContactMe() {
           variant="contained"
           type="submit"
           onClick={handleSubmit}
-          color="primary"
           size="large"
-          sx={{ width: "max(40%, 150px)", margin: "auto", padding: "10px 0px", borderRadius: "15px", marginY: "20px" }}
+          sx={{ width: "max(40%, 150px)", margin: "auto", padding: "10px 0px", borderRadius: "15px", marginY: "20px", background: "linear-gradient(180deg, #6f2da8 30%, #6f2dc8 100%)" }}
         >
           <Typography variant="h5" sx={{ width: "max(60%, 150px)" }}>
             SEND

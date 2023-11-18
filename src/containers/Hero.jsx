@@ -75,7 +75,7 @@ export default function Hero() {
                 transition={{ duration: 1.5 }}
               >
                 <Typography variant="h4" align="center">
-                  I'm a Full-Stack Software Developer
+                  Full Stack Software Developer
                 </Typography>
               </motion.div>
             </ListItem>
@@ -86,7 +86,7 @@ export default function Hero() {
                 transition={{ duration: 1.5 }}
               >
                 <Typography variant="h4" align="center">
-                  I'm a Recent Graduate from University of Waterloo
+                  Recent Graduate from University of Waterloo
                 </Typography>
               </motion.div>
             </ListItem>
