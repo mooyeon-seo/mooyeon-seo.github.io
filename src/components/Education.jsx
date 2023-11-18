@@ -29,16 +29,8 @@ const StyledRightContent = styled("div")({
   borderLeft: "1px solid #981616",
 });
 
-export default function Work({
-  timeline,
-  company,
-  position,
-  location,
-  link,
-  descriptions,
-}) {
-  return (
-    <motion.div
+export default function Education({timeline, school, degree, location, link, descriptions}) {
+    return (<motion.div
       initial={{ x: -50 }}
       whileInView={{ x: 0 }}
       transition={{ duration: 1.2 }}
@@ -46,11 +38,10 @@ export default function Work({
       <StyledWork>
         <TimeLine timeline={timeline} location={location} />
         <StyledRightContent>
-          <Navigation title={company} link={link} />
-          <Typography variant="subtitle1">{position.toUpperCase()}</Typography>
+          <Navigation title={school} link={link} />
+          <Typography variant="subtitle1">{degree.toUpperCase()}</Typography>
           <Description descriptions={descriptions} />
         </StyledRightContent>
       </StyledWork>
-    </motion.div>
-  );
+    </motion.div>)
 }

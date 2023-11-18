@@ -9,6 +9,8 @@ const WorksContainer = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   gap: UI.gap,
+  padding: "0 " + UI.padding,
+  margin: "0 " + UI.margin, 
 });
 
 export default function Works() {
@@ -16,7 +18,7 @@ export default function Works() {
     <WorksContainer className="works">
       <Title title="Work Experience" />
       <Work
-        timeline="AUGUST 2023 - PRESENT"
+        timeline="AUGUST 2023 ~ PRESENT"
         company={"Raspberry Sherbet".toUpperCase()}
         position="Founder"
         location="North York, Ontario"
@@ -28,7 +30,7 @@ export default function Works() {
         ]}
       />
       <Work
-        timeline="APRIL 2023 - PRESENT"
+        timeline="APRIL 2023 ~ PRESENT"
         company={"Softmoc".toUpperCase()}
         position="Key Holder"
         location="North York, Ontario"
@@ -50,7 +52,7 @@ export default function Works() {
         ]}
       />
       <Work
-        timeline="JULY 2017 - APRIL 2019"
+        timeline="JULY 2017 ~ APRIL 2019"
         company={"Republic of Korea Army".toUpperCase()}
         position="Sergeant"
         location="Paju, The Korean DMZ"
