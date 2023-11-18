@@ -1,6 +1,5 @@
 import React from 'react';
 import Title from '../components/Title';
-import RotatingSquare from "../components/RotatingSquare";
 import ProjectSection from '../components/ProjectSection';
 
 const projects = {

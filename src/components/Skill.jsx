@@ -1,22 +1,20 @@
 import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
-import { makeStyles } from "@mui/styles"; // Import makeStyles from @mui/styles
+import { styled } from "@mui/system"; // Import styled from @mui/system
 
-const useStyles = makeStyles({
-  skill: {
-    padding: 10,
-    margin: 10,
-    borderRadius: 10,
-    "&:hover": {
-      boxShadow:
-        "0px 0px 10px rgba(0, 0, 0, 0.5)" /* add box-shadow on hover */,
-    },
-  },
-  skillContainer: {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: 10,
-    justifyContent: "center",
+const SkillContainer = styled("div")({
+  display: "flex",
+  flexWrap: "wrap",
+  gap: 10,
+  justifyContent: "center",
+});
+
+const StyledSkill = styled(motion.div)({
+  padding: 10,
+  margin: 10,
+  borderRadius: 10,
+  "&:hover": {
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)" /* add box-shadow on hover */,
   },
 });
 
@@ -92,24 +90,22 @@ function SVGImage({ skill, width }) {
 }
 
 export default function Skill({ category }) {
-  const classes = useStyles();
   return (
-    <motion.div
+    <StyledSkill
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.4 }}
-      className={classes.skill}
     >
       <Typography variant="h4" textAlign={"center"}>
         {category.title.toUpperCase()}
       </Typography>
-      <div className={classes.skillContainer}>
+      <SkillContainer>
         {category.skills.map((skill, index) => (
           <Typography variant="subtitle1" key={index}>
             <SVGImage skill={skill} width={"45em"} />
           </Typography>
         ))}
-      </div>
-    </motion.div>
+      </SkillContainer>
+    </StyledSkill>
   );
 }

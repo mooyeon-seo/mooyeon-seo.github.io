@@ -1,4 +1,3 @@
-import { Paper } from "@mui/material";
 import Title from "../components/Title";
 import Skill from "../components/Skill";
 import { motion } from "framer-motion";

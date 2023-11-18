@@ -1,50 +1,49 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { styled } from "@mui/system";
 import { Typography } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { motion } from "framer-motion";
 import RotatingSquare from "../components/RotatingSquare";
 
-const useStyles = makeStyles((theme) => ({
-  hero: {
-    height: "100vh", // This will make the hero section take up the full height of the viewport
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 15,
-  },
-  heroContent: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 25,
-  },
-  textContainer: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    gap: 15,
-  },
-  arrow: {
-    width: 0,
-    height: 0,
-    color: "black",
-    borderTop: "solid 20px transparent",
-    borderBottom: "solid 20px transparent",
-    borderLeft: "solid 20px white",
-    cursor: "pointer",
-  },
-}));
+const HeroSection = styled("section")({
+  height: "100vh",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: 15,
+});
+
+const HeroContent = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: 25,
+});
+
+const TextContainer = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  gap: 15,
+});
+
+const Arrow = styled("div")({
+  width: 0,
+  height: 0,
+  color: "black",
+  borderTop: "solid 20px transparent",
+  borderBottom: "solid 20px transparent",
+  borderLeft: "solid 20px white",
+  cursor: "pointer",
+});
 
 export default function Hero() {
-  const classes = useStyles();
-
   return (
-    <section className={classes.hero}>
-      <div className={classes.heroContent}>
+    <HeroSection>
+      <HeroContent>
         <RotatingSquare />
-        <div className={`${classes.textContainer} text-container`}>
+        <TextContainer className="text-container">
           <Typography variant="h4" align="center">
             My name is
           </Typography>
@@ -91,14 +90,14 @@ export default function Hero() {
               </motion.div>
             </ListItem>
           </List>
-        </div>
-      </div>
+        </TextContainer>
+      </HeroContent>
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className={classes.arrow}
+        component={Arrow}
       />
-    </section>
+    </HeroSection>
   );
 }

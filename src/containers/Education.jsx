@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@mui/styles";
+import { styled } from "@mui/system";
 import { motion } from "framer-motion";
 // Import Components
 import Description from "../components/Description";
@@ -8,59 +8,53 @@ import Icon from "../components/Icon";
 import Navigation from "../components/Navigation";
 import Timeline from "../components/Timeline";
 
-const useStyles = makeStyles((theme) => ({
-  education: {
-    margin: 10,
-    padding: 10,
-  },
-  educationContent: {
-    display: "grid",
-    gridTemplateColumns: "1fr 4fr" /* set the width of the columns */,
-    padding: 10,
-    gap: 5,
-    "&:hover": {
-      boxShadow:
-        "0px 0px 10px rgba(0, 0, 0, 0.5)" /* add box-shadow on hover */,
-    },
-  },
-  timelineContainer: {
-    display: "flex",
-    gap: 0,
-    justifyContent: "flex-start",
-  },
-  timeline: {
-    // your styles here
-  },
-  descriptionContainer: {
-    padding: "10px",
-    gap: "10px",
-    display: "flex",
-    flexDirection: "column",
-    borderLeft: "1px solid #981616",
+const EducationContainer = styled("div")({
+  margin: 10,
+  padding: 10,
+});
+
+const EducationContent = styled("div")(({ theme }) => ({
+  display: "grid",
+  gridTemplateColumns: "1fr 4fr",
+  padding: 10,
+  gap: 5,
+  "&:hover": {
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
   },
 }));
 
-export default function Education() {
-  const classes = useStyles();
+const TimelineContainer = styled("div")({
+  display: "flex",
+  gap: 0,
+  justifyContent: "flex-start",
+});
 
+const DescriptionContainer = styled("div")({
+  padding: "10px",
+  gap: "10px",
+  display: "flex",
+  flexDirection: "column",
+  borderLeft: "1px solid #981616",
+});
+
+export default function Education() {
   return (
-    <div className={classes.education}>
+    <EducationContainer>
       <Title title="Education" />
-      <motion.div className={classes.educationContent} initial={{ x: 50 }}
-          whileInView={{ x: 0 }}
-          transition={{ duration: 1.2 }}>
-        <div
-          
-          className={classes.timelineContainer}
-        >
+      <motion.div
+        component={EducationContent}
+        initial={{ x: 50 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 1.2 }}
+      >
+        <TimelineContainer>
           <Timeline
             timeline="SEPTEMBER 2016 - AUGUST 2022"
             location="Waterloo, Ontario"
-            className={classes.timeline}
           />
           <Icon alt="University of Waterloo Seal" src="assets/uw_seal.png" />
-        </div>
-        <div className={classes.descriptionContainer}>
+        </TimelineContainer>
+        <DescriptionContainer>
           <Navigation title={"University of Waterloo".toUpperCase()} link="" />
           <h4>Computer Science</h4>
           <Description
@@ -69,8 +63,8 @@ export default function Education() {
               "Received University of Waterloo President’s Scholarship",
             ]}
           />
-        </div>
+        </DescriptionContainer>
       </motion.div>
-    </div>
+    </EducationContainer>
   );
 }

@@ -1,14 +1,18 @@
-import { makeStyles } from "@mui/styles";
+import { styled } from "@mui/system";
 
 const iconSize = 45;
-const useStyles = makeStyles((theme) => ({
-  icon: {
-    "marginLeft": 15,
-    "&:hover img": {
-      boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
-    },
+
+const IconWrapper = styled("div")({
+  marginLeft: 15,
+  "&:hover img": {
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
   },
-}));
+});
+
+const IconImage = styled("img")({
+  width: (props) => props.width || iconSize,
+  height: (props) => props.height || iconSize,
+});
 
 export default function Icon({
   alt,
@@ -17,26 +21,16 @@ export default function Icon({
   width = iconSize,
   height = iconSize,
 }) {
-  const classes = useStyles();
-
   const renderIcon = (link) => {
     if (link) {
       return (
-        <a href={link} className={classes.icon}>
-          <img src={src} alt={alt} width={width} height={height} />
+        <a href={link}>
+          <IconImage src={src} alt={alt} width={width} height={height} />
         </a>
       );
     }
-    return (
-      <img
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        className={classes.icon}
-      />
-    );
+    return <IconImage src={src} alt={alt} width={width} height={height} />;
   };
 
-  return renderIcon(link);
+  return <IconWrapper>{renderIcon(link)}</IconWrapper>;
 }

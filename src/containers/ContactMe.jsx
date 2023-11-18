@@ -12,7 +12,6 @@ export default function ContactMe() {
   const [message, setMessage] = useState("");
   const [isSent, setIsSent] = useState(false);
   const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();

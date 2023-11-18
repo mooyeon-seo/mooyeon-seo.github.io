@@ -1,24 +1,19 @@
 import React from "react";
 import { Paper } from "@mui/material";
-import { makeStyles } from "@mui/styles";
-import ContactMe from "../containers/ContactMe";  
+import { styled } from "@mui/system";
+import ContactMe from "../containers/ContactMe";
 
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: theme.spacing(3),
-    marginTop: theme.spacing(3),
-  },
+const RootPaper = styled(Paper)(({ theme }) => ({
+  padding: theme.spacing(3),
+  marginTop: theme.spacing(3),
 }));
 
 function Footer() {
-  const classes = useStyles();
-  
   return (
     <footer>
-      <Paper className={classes.root}>
+      <RootPaper>
         <ContactMe />
-      </Paper>
+      </RootPaper>
     </footer>
   );
 }

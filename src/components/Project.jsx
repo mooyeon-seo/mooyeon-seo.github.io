@@ -1,31 +1,25 @@
 import { Typography, Card, CardMedia, CardContent } from "@mui/material";
-import { makeStyles } from "@mui/styles"; // Import makeStyles from @mui/styles
+import { styled } from "@mui/system";
 
-const useStyles = makeStyles({
-  container: {
-    position: "relative",
-    "&:hover $image": {
-      display: "block",
-    },
+const Container = styled(Card)({
+  position: "relative",
+  "&:hover .image": {
+    display: "block",
   },
-  image: {
-    display: "none",
-  },
-  project: {
-    "&:hover": {
-      boxShadow:
-        "0px 0px 10px rgba(0, 0, 0, 0.5)" /* add box-shadow on hover */,
-    },
+  "&:hover": {
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
   },
 });
 
-export default function Project({ project }) {
-  const classes = useStyles();
+const Image = styled(CardMedia)({
+  display: "none",
+});
 
+export default function Project({ project }) {
   return (
-    <Card className={classes.project}>
+    <Container>
       <a href={project.link ?? ""}>
-        <CardMedia
+        <Image
           sx={{
             width: 200,
             height: 200,
@@ -34,6 +28,7 @@ export default function Project({ project }) {
           }}
           image={project.backgroundImage.src}
           title={project.backgroundImage.alt}
+          className="image"
         />
       </a>
 
@@ -45,6 +40,6 @@ export default function Project({ project }) {
           {project.description}
         </Typography>
       </CardContent>
-    </Card>
+    </Container>
   );
 }
