@@ -31,6 +31,7 @@ const StyledRightContent = styled("div")({
 
 const InstitutionLogo = styled("div")({
     display: "flex",
+    alignItems: "center",
 });
 
 export default function Education({
@@ -55,7 +56,6 @@ export default function Education({
             <Navigation title={school} link={link} />
             {children && children}
           </InstitutionLogo>
-
           <Typography variant="subtitle1">{degree.toUpperCase()}</Typography>
           <Description descriptions={descriptions} />
         </StyledRightContent>

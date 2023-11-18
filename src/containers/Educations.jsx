@@ -42,7 +42,7 @@ export default function Educations() {
       <Education
         timeline={"SEPTEMBER 2023 ~ Present"}
         school={"CODECADEMY"}
-        degree={"Full-Stack Engineer Path"}
+        degree={"Full Stack Engineer Path"}
         location={"Remote"}
         descriptions={[
           "Graduated with Distinction",
@@ -59,7 +59,7 @@ export default function Educations() {
           "Received University of Waterloo President’s Scholarship",
         ]}
       >
-        <Icon alt="University of Waterloo Seal" src="assets/uw_seal.png" />
+        <Icon alt="University of Waterloo Seal" src="assets/uw_seal.png" width="20px" height="20px"/>
       </Education>
     </EducationContainer>
   );

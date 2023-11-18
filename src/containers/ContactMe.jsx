@@ -112,17 +112,24 @@ export default function ContactMe() {
           error={errors.message ? true : false}
           helperText={errors.message}
         />
-        <Button
-          variant="contained"
-          type="submit"
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          style={{
+            width: "max(40%, 150px)",
+            margin: "auto",
+            padding: "10px 0px",
+            borderRadius: "15px",
+            marginY: "20px",
+            background: "linear-gradient(180deg, #6f2da8 30%, #6f2dc8 100%)",
+            display: "flex",
+            justifyContent: "center"
+          }}
           onClick={handleSubmit}
-          size="large"
-          sx={{ width: "max(40%, 150px)", margin: "auto", padding: "10px 0px", borderRadius: "15px", marginY: "20px", background: "linear-gradient(180deg, #6f2da8 30%, #6f2dc8 100%)" }}
         >
-          <Typography variant="h5" sx={{ width: "max(60%, 150px)" }}>
+          <Typography variant="h5" color="white">
             SEND
           </Typography>
-        </Button>
+        </motion.div>
       </form>
       <Snackbar
         open={isSent}
