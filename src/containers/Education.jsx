@@ -42,28 +42,32 @@ export default function Education() {
     <EducationContainer>
       <Title title="Education" />
       <motion.div
-        component={EducationContent}
         initial={{ x: 50 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 1.2 }}
       >
-        <TimelineContainer>
-          <Timeline
-            timeline="SEPTEMBER 2016 - AUGUST 2022"
-            location="Waterloo, Ontario"
-          />
-          <Icon alt="University of Waterloo Seal" src="assets/uw_seal.png" />
-        </TimelineContainer>
-        <DescriptionContainer>
-          <Navigation title={"University of Waterloo".toUpperCase()} link="" />
-          <h4>Computer Science</h4>
-          <Description
-            descriptions={[
-              "Graduated with Distinction",
-              "Received University of Waterloo President’s Scholarship",
-            ]}
-          />
-        </DescriptionContainer>
+        <EducationContent>
+          <TimelineContainer>
+            <Timeline
+              timeline="SEPTEMBER 2016 - AUGUST 2022"
+              location="Waterloo, Ontario"
+            />
+            <Icon alt="University of Waterloo Seal" src="assets/uw_seal.png" />
+          </TimelineContainer>
+          <DescriptionContainer>
+            <Navigation
+              title={"University of Waterloo".toUpperCase()}
+              link=""
+            />
+            <h4>Computer Science</h4>
+            <Description
+              descriptions={[
+                "Graduated with Distinction",
+                "Received University of Waterloo President’s Scholarship",
+              ]}
+            />
+          </DescriptionContainer>
+        </EducationContent>
       </motion.div>
     </EducationContainer>
   );

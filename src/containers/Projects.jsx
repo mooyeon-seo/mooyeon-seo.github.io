@@ -1,4 +1,3 @@
-import React from 'react';
 import Title from '../components/Title';
 import ProjectSection from '../components/ProjectSection';
 
@@ -12,12 +11,7 @@ const projects = {
                 src: '/assets/project/willitrain.png',
                 alt: 'Will It Rain?'
             },
-            images: [
-                // {
-                //     src: '/assets/project/willitrain.png',
-                //     alt: 'Will It Rain?'
-                // }
-            ]
+            images: []
         },
         {
             title: "Basic To Do",
@@ -27,8 +21,7 @@ const projects = {
                 src: '/assets/project/basicToDo.png',
                 alt: 'Basic To Do'
             },
-            images: [
-            ]
+            images: []
         },
         {
             title: "Sentinel",
@@ -38,19 +31,20 @@ const projects = {
                 src: '/assets/project/willitrain.png',
                 alt: 'Will It Rain?'
             },
-            images: [
-            ]
+            images: []
         }
     ]
 }
 
-export default function Projects() {    
+export default function Projects() {
     return (
-        <>
-            <Title title="Project " />
-            
-            <ProjectSection category="iOS DEVELOPMENT" projects={projects.iOS} />            
+        <div>
+            <Title title="Project"/>
+
+            <div>
+                <ProjectSection category="iOS DEVELOPMENT" projects={projects.iOS} />
+            </div>
             {/* <RotatingSquare/> */}
-        </>
+        </div>
     );
 };
