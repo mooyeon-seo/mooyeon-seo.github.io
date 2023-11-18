@@ -45,7 +45,7 @@ export default function Education({
 }) {
   return (
     <motion.div
-      initial={{ x: -50 }}
+      initial={{ x: 50 }}
       whileInView={{ x: 0 }}
       transition={{ duration: 1.2 }}
     >

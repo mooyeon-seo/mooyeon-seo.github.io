@@ -113,9 +113,9 @@ export default function ContactMe() {
           helperText={errors.message}
         />
         <motion.div
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.015 }}
           style={{
-            width: "max(40%, 150px)",
+            width: "max(50%, 300px)",
             margin: "auto",
             padding: "10px 0px",
             borderRadius: "15px",

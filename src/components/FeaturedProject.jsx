@@ -1,8 +1,8 @@
 import { Typography, Card, CardMedia, CardContent } from "@mui/material";
 import { styled } from "@mui/system";
-import { UI } from "../constants/ui"; 
+import { UI } from "../constants/ui";
 
-const ProjectContainer = styled('div')({
+const ProjectContainer = styled("div")({
   margin: UI.margin,
   padding: UI.padding,
   transition: "box-shadow 0.3s ease-in-out" /* add transition effect */,
@@ -11,17 +11,12 @@ const ProjectContainer = styled('div')({
   },
 });
 
-export default function Project({ project }) {
+export default function FeaturedProject({ project }) {
   return (
     <ProjectContainer>
-      <CardContent>
-        <Typography variant="h4" align="center">
-          {project.title}
-        </Typography>
-        <Typography variant="subtitle1" align="center">
-          {project.description}
-        </Typography>
-      </CardContent>
+      <Typography variant="h4" align="center">
+        {project.title}
+      </Typography>
     </ProjectContainer>
   );
 }

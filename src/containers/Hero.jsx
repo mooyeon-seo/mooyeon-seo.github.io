@@ -4,7 +4,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { motion } from "framer-motion";
 import RotatingSquare from "../components/RotatingSquare";
-import { UI } from '../constants/ui';
+import { UI } from "../constants/ui";
 
 const HeroSection = styled("section")({
   height: "100vh",
@@ -39,6 +39,20 @@ const Arrow = styled("div")({
   cursor: "pointer",
 });
 
+function ItemWithMotion({ heading, initialX }) {
+  return (
+    <motion.div
+    initial={{ x: initialX }}
+    whileInView={{ x: 0 }}
+    transition={{ duration: 1.2 }}
+    >
+      <Typography variant="h4" align="center">
+        {heading}
+      </Typography>
+    </motion.div>
+  );
+}
+
 export default function Hero() {
   return (
     <HeroSection>
@@ -66,29 +80,18 @@ export default function Hero() {
               Mooyeon Seo
             </Typography>
           </motion.div>
-
           <List>
             <ListItem>
-              <motion.div
-                initial={{ x: 50 }}
-                whileInView={{ x: 0 }}
-                transition={{ duration: 1.5 }}
-              >
-                <Typography variant="h4" align="center">
-                  Full Stack Software Developer
-                </Typography>
-              </motion.div>
+              <ItemWithMotion
+                heading="Full Stack Software Developer"
+                initialX={50}
+              />
             </ListItem>
             <ListItem>
-              <motion.div
-                initial={{ x: 80 }}
-                whileInView={{ x: 0 }}
-                transition={{ duration: 1.5 }}
-              >
-                <Typography variant="h4" align="center">
-                  Recent Graduate from University of Waterloo
-                </Typography>
-              </motion.div>
+              <ItemWithMotion
+                heading="Recent Graduate From University Of Waterloo"
+                initialX={80}
+              />
             </ListItem>
           </List>
         </TextContainer>
