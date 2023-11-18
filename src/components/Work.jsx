@@ -26,7 +26,7 @@ const StyledRightContent = styled("div")({
   gap: UI.gap,
   display: "flex",
   flexDirection: "column",
-  borderLeft: "1px solid #981616",
+  borderLeft: "1px solid #6f2da8",
 });
 
 export default function Work({

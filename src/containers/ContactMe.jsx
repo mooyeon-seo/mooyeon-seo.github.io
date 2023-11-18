@@ -116,11 +116,12 @@ export default function ContactMe() {
           variant="contained"
           type="submit"
           onClick={handleSubmit}
-          color="success"
+          color="primary"
           size="large"
+          sx={{ width: "max(40%, 150px)", margin: "auto", padding: "10px 0px", borderRadius: "15px", marginY: "20px" }}
         >
           <Typography variant="h5" sx={{ width: "max(60%, 150px)" }}>
-            SEND ➤
+            SEND
           </Typography>
         </Button>
       </form>

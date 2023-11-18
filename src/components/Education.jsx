@@ -26,11 +26,24 @@ const StyledRightContent = styled("div")({
   gap: UI.gap,
   display: "flex",
   flexDirection: "column",
-  borderLeft: "1px solid #981616",
+  borderLeft: "1px solid #6f2da8",
 });
 
-export default function Education({timeline, school, degree, location, link, descriptions}) {
-    return (<motion.div
+const InstitutionLogo = styled("div")({
+    display: "flex",
+});
+
+export default function Education({
+  timeline,
+  school,
+  degree,
+  location,
+  link,
+  descriptions,
+  children,
+}) {
+  return (
+    <motion.div
       initial={{ x: -50 }}
       whileInView={{ x: 0 }}
       transition={{ duration: 1.2 }}
@@ -38,10 +51,15 @@ export default function Education({timeline, school, degree, location, link, des
       <StyledWork>
         <TimeLine timeline={timeline} location={location} />
         <StyledRightContent>
-          <Navigation title={school} link={link} />
+          <InstitutionLogo>
+            <Navigation title={school} link={link} />
+            {children && children}
+          </InstitutionLogo>
+
           <Typography variant="subtitle1">{degree.toUpperCase()}</Typography>
           <Description descriptions={descriptions} />
         </StyledRightContent>
       </StyledWork>
-    </motion.div>)
+    </motion.div>
+  );
 }

@@ -8,7 +8,7 @@ export default function RotatingSquare() {
         body: {
             width: "300px",
             height: "300px",
-            background: "linear-gradient(180deg, #ff008c 0%, rgb(211, 9, 225) 100%)",
+            background: "linear-gradient(180deg, #6f2da8 0%, rgb(211, 9, 225) 100%)",
             overflow: "hidden",
             padding: 0,
             margin: 0,
