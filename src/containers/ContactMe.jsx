@@ -1,4 +1,4 @@
-import { Button, TextField, Snackbar, Typography } from "@mui/material";
+import { TextField, Snackbar, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Title from "../components/Title";
@@ -122,7 +122,7 @@ export default function ContactMe() {
             marginY: "20px",
             background: "linear-gradient(180deg, #6f2da8 30%, #6f2dc8 100%)",
             display: "flex",
-            justifyContent: "center"
+            justifyContent: "center",
           }}
           onClick={handleSubmit}
         >

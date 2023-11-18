@@ -1,4 +1,4 @@
-import { Typography, Card, CardMedia, CardContent } from "@mui/material";
+import { Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { UI } from "../constants/ui";
 
