@@ -3,7 +3,6 @@ import { Typography } from "@mui/material";
 import { UI } from "../constants/ui";
 import { styled } from "@mui/system";
 import Title from "../components/Title";
-import Navigation from "../components/Navigation";
 
 const BusinessSection = styled("div")({
   display: "flex",

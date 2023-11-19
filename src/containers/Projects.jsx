@@ -1,6 +1,5 @@
 import Title from "../components/Title";
 import ProjectSection from "../components/ProjectSection";
-import FeaturedProject from "../components/FeaturedProject";
 import styled from "styled-components";
 
 const projects = [

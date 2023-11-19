@@ -15,9 +15,9 @@ const TimeLineSection = styled("div")({
 
 export default function TimeLine({ timeline, location }) {
   return (
-    <div className="timelineSection">
+    <TimeLineSection>
       <Typography variant="subtitle1">{timeline}</Typography>
       <Typography variant="subtitle2">{location}</Typography>      
-    </div>
+    </TimeLineSection>
   );
 }
