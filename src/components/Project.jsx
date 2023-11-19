@@ -9,6 +9,8 @@ const ProjectContainer = styled('div')({
   "&:hover": {
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)" /* add box-shadow on hover */,
   },
+  width: "80%", // set width to 100%
+  height: "80%", // set height to 100%
 });
 
 export default function Project({ project }) {

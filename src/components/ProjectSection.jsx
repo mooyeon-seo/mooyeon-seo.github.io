@@ -19,7 +19,7 @@ export default function ProjectSection({ category, projects }) {
                 <Grid container spacing={2}>
                     {Array.isArray(projects) &&
                         projects.map((project, index) => (
-                            <Grid item xs={12} md={4} key={index}>
+                            <Grid item xs={1} md={4} key={index} style={{ aspectRatio: "1/1" }}>
                                 <Project
                                     project={project}
                                 />

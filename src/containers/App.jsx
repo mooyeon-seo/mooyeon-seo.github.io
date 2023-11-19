@@ -8,6 +8,7 @@ import Educations from "./Educations";
 import Works from "./Works";
 import Hero from "./Hero";
 import Skills from "./Skills";
+import Business from "./Business";
 
 export default function App() {
   const theme = React.useMemo(
@@ -27,6 +28,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Hero />
+      <Business />
       <Projects />
       <Educations />
       <Works />
