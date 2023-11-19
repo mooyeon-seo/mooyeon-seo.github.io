@@ -26,17 +26,17 @@ const BusinessLogo = styled("img")({
 const BusinessContent = styled("div")({
   height: "100%",
   display: "grid",
-  gridTemplateColumns: `${UI.businessBoxUnit} ${UI.businessBoxUnit} ${UI.businessBoxUnit}`, // Three equal-width columns
-  gridTemplateRows: `${UI.businessBoxUnit} ${UI.businessBoxUnit} ${UI.businessBoxUnit}`, // Three equal-width columns
+  gridTemplateColumns: `${UI.businessBoxUnit} ${UI.businessBoxUnit}`, // Three equal-width columns
+  gridTemplateRows: `${UI.businessBoxUnit} ${UI.businessBoxUnit}`, // Three equal-width columns
   alignItems: "center",
   justifyContent: "baseline",
   gap: UI.gap,
   padding: UI.padding,
 });
 
-const BusinessDescription = ({ descriptions }) => {
+const DescriptionBlock = ({ description }) => {
   const Content = styled("div")({
-    backgroundColor: "#ffcccc",
+    backgroundColor: description.backgroundColor,
     borderRadius: UI.borderRadius,
     display: "flex",
     flexDirection: "column",
@@ -47,23 +47,20 @@ const BusinessDescription = ({ descriptions }) => {
     gap: UI.gap,
   });
   return (
-    <Content>
-      {descriptions &&
-        descriptions.map((description) => {
-          return (
-            <motion.div whileHover={{ scale: 1.025 }}>
-              <Typography
-                variant="h6"
-                align="center"
-                color="white"
-                fontFamily={"anton"}
-              >
-                {description}
-              </Typography>
-            </motion.div>
-          );
-        })}
-    </Content>
+    <motion.div whileHover={{ scale: 1.025 }} style={{height: "100%", width:"100^"}}>
+      <Content>
+        {description.title && description.backgroundColor && (
+          <Typography
+            variant="h6"
+            align="center"
+            color="white"
+            fontFamily={"anton"}
+          >
+            {description.title}
+          </Typography>
+        )}
+      </Content>
+    </motion.div>
   );
 };
 
@@ -84,14 +81,6 @@ export default function Business() {
     <BusinessSection>
       <Title title="Business" />
       <BusinessContent>
-        <BusinessDescription
-          descriptions={[
-            "Full Stack Development",
-            "Digital Marketing",
-            "Manufacturing",
-            "Shipping",
-          ]}
-        />
         <BusinessLogoContainer>
           <motion.div whileHover={{ scale: 1.025 }}>
             <BusinessLogo
@@ -103,12 +92,15 @@ export default function Business() {
             />
           </motion.div>
         </BusinessLogoContainer>
+        {[
+          { title: "Full Stack Development", backgroundColor: "#ffcccc" },
+          { title: "Digital Marketing", backgroundColor: "#cf838d" },
+          { title: "Manufacturing and Shipping", backgroundColor: "#980036" },
+        ].map((description) => (
+          <DescriptionBlock description={description} />
+        ))}
         <EmptyDescription />
         <EmptyDescription />
-        <EmptyDescription />
-
-        <EmptyDescription />
-
         <EmptyDescription />
         <EmptyDescription />
         <EmptyDescription />
