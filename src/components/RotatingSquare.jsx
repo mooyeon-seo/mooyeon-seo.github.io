@@ -4,7 +4,7 @@ import { styled } from "@mui/system";
 const StyledBackground = styled("div")({
   width: "300px",
   height: "300px",
-  background: "linear-gradient(180deg, #6f2da8 0%, rgb(211, 9, 225) 100%)",
+  background: "linear-gradient(180deg, #E30B5C 0%, #ffcccc 100%)",
   overflow: "hidden",
   padding: 0,
   margin: 0,

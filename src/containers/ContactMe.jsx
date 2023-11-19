@@ -120,7 +120,7 @@ export default function ContactMe() {
             padding: "10px 0px",
             borderRadius: "15px",
             marginY: "20px",
-            background: "linear-gradient(180deg, #6f2da8 30%, #6f2dc8 100%)",
+            background: "linear-gradient(180deg, #E30B5C 30%, #E30B5C 100%)",
             display: "flex",
             justifyContent: "center",
           }}

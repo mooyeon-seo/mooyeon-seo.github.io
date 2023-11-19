@@ -72,7 +72,9 @@ export default function Hero() {
               align="center"
               sx={{
                 background:
-                  "-webkit-linear-gradient(45deg, rgb(211, 9, 225) 10%, #6f2da8 90%)",
+                  "-webkit-linear-gradient(45deg, #E30B5C 10%, #ffcccc 90%)",
+                  // "-webkit-linear-gradient(45deg, rgb(211, 9, 225) 10%, #6f2da8 90%)",
+                  
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}

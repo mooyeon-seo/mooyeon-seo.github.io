@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 
 export default function Navigation({title, link}) {
     return (
-        <Link href={link} underline="hover" color="#8f00ff">
+        <Link href={link} underline="hover" color="#E30B5C">
             <Typography variant="h6">{title}</Typography>
         </Link>
     )

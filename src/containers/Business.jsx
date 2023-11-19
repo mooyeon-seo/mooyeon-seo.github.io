@@ -52,14 +52,16 @@ const BusinessDescription = ({ descriptions }) => {
       {descriptions &&
         descriptions.map((description) => {
           return (
-            <Typography
-              variant="h6"
-              align="center"
-              color="white"
-              fontFamily={"anton"}
-            >
-              {description}
-            </Typography>
+            <motion.div whileHover={{ scale: 1.025 }}>
+              <Typography
+                variant="h6"
+                align="center"
+                color="white"
+                fontFamily={"anton"}
+              >
+                {description}
+              </Typography>
+            </motion.div>
           );
         })}
     </Content>
@@ -83,7 +85,6 @@ export default function Business() {
     <BusinessSection>
       <Title title="Business" />
       <BusinessContent>
-        
         <BusinessDescription
           descriptions={[
             "Full Stack Development",
@@ -106,7 +107,7 @@ export default function Business() {
         <EmptyDescription />
         <EmptyDescription />
         <EmptyDescription />
-        
+
         <EmptyDescription />
 
         <EmptyDescription />
