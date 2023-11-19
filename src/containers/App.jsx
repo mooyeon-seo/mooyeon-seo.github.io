@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
-import { Element } from "react-scroll";
 import Projects from "./Projects";
 import Footer from "./Footer";
 import Educations from "./Educations";

@@ -6,10 +6,10 @@ import Title from "../components/Title";
 import Navigation from "../components/Navigation";
 
 const BusinessSection = styled("div")({
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-})
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+});
 
 const BusinessLogoContainer = styled("div")({
   borderRadius: "20px",
@@ -35,22 +35,33 @@ const BusinessContent = styled("div")({
   padding: UI.padding,
 });
 
-const BusinessDescription = ({ description }) => {
+const BusinessDescription = ({ descriptions }) => {
   const Content = styled("div")({
-    backgroundColor: "#dc143c",
+    backgroundColor: "#ffcccc",
     borderRadius: UI.borderRadius,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     height: "100%",
-    width: "100%"
+    width: "100%",
+    gap: UI.gap,
   });
   return (
     <Content>
-      <Typography variant="h5" align="center" color="white" fontFamily={"anton"}>
-        {description}
-      </Typography>
+      {descriptions &&
+        descriptions.map((description) => {
+          return (
+            <Typography
+              variant="h6"
+              align="center"
+              color="white"
+              fontFamily={"anton"}
+            >
+              {description}
+            </Typography>
+          );
+        })}
     </Content>
   );
 };
@@ -64,10 +75,7 @@ const EmptyDescription = () => {
     // alignItems: "center",
     // justifyContent: "center",
   });
-  return (
-    <Content>
-    </Content>
-  );
+  return <Content></Content>;
 };
 
 export default function Business() {
@@ -75,13 +83,17 @@ export default function Business() {
     <BusinessSection>
       <Title title="Business" />
       <BusinessContent>
-              <EmptyDescription />
-        <BusinessDescription description={"Products"} />
-        <EmptyDescription />
-
-        <BusinessDescription description={"Web Development"} />
+        
+        <BusinessDescription
+          descriptions={[
+            "Full Stack Development",
+            "Digital Marketing",
+            "Manufacturing",
+            "Shipping",
+          ]}
+        />
         <BusinessLogoContainer>
-          <motion.div whileHover={{ scale: 1.015 }}>
+          <motion.div whileHover={{ scale: 1.025 }}>
             <BusinessLogo
               src="/assets/businesslogo.svg"
               alt="Raspberry Sherbet Logo"
@@ -91,10 +103,14 @@ export default function Business() {
             />
           </motion.div>
         </BusinessLogoContainer>
-        <BusinessDescription description={"Digital Marketing"} />
+        <EmptyDescription />
+        <EmptyDescription />
+        <EmptyDescription />
+        
+        <EmptyDescription />
 
         <EmptyDescription />
-        <BusinessDescription description={"Shipping"} />
+        <EmptyDescription />
         <EmptyDescription />
       </BusinessContent>
     </BusinessSection>
