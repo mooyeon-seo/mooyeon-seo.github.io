@@ -1,29 +1,57 @@
-import { Typography, CardContent } from "@mui/material";
+import { motion } from "framer-motion";
+import { Typography } from "@mui/material";
+import { UI } from "../constants/ui";
 import { styled } from "@mui/system";
-import { UI } from "../constants/ui"; 
+import { navigationOnClick } from "../constants/navigationOnClick.js";
 
-const ProjectContainer = styled('div')({
-  margin: UI.margin,
+const ProjectTextContainer = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "start",
   padding: UI.padding,
-  transition: "box-shadow 0.3s ease-in-out" /* add transition effect */,
-  "&:hover": {
-    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)" /* add box-shadow on hover */,
-  },
-  width: "80%", // set width to 100%
-  height: "80%", // set height to 100%
+  gap: UI.gap,
+  color: "white",
 });
 
 export default function Project({ project }) {
+  const Content = styled("div")({
+    backgroundColor: project.backgroundColor
+      ? project.backgroundColor
+      : "black",
+    borderRadius: UI.borderRadius,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "start",
+    height: "100%",
+    width: "100%",
+    gap: UI.gap,
+  });
   return (
-    <ProjectContainer>
-      <CardContent>
-        <Typography variant="h4" align="center">
-          {project.title}
-        </Typography>
-        <Typography variant="subtitle1" align="center">
-          {project.description}
-        </Typography>
-      </CardContent>
-    </ProjectContainer>
+    <motion.div
+      whileHover={{ scale: 1.025 }}
+      initial={{ opacity: 0.65 }}
+      whileInView={{ opacity: 1 }}
+      style={{ height: "100%", width: "100^" }}
+      onClick={() => navigationOnClick(project.link)}
+    >
+      <Content>
+        {project.title && (
+          <ProjectTextContainer>
+            <Typography
+              variant="h6"
+              align="center"
+              color="white"
+              fontFamily={"anton"}
+            >
+              {project.title}
+            </Typography>
+            <Typography variant="subtitle1">{project.category}</Typography>
+            <Typography variant="subtitle1">{project.description}</Typography>
+          </ProjectTextContainer>
+        )}
+      </Content>
+    </motion.div>
   );
-}
+};

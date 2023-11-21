@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Typography } from "@mui/material";
 import { UI } from "../constants/ui";
 import { styled } from "@mui/system";
+import Project from "../components/Project";
 
 const projects = [
   {
@@ -16,14 +17,15 @@ const projects = [
     title: "OS/161 ⭐",
     category: "Academic (C)",
     description: "Implement Core Features like fork, execv and virtual memory",
-    link: "",
+    link: "https://github.com/RedDevil2002/os161_modification",
     backgroundColor: "#cf838d",
   },
   {
-    title: "MakeItEasy ⭐",
+    title: "RetagEm ⭐",
     category: "Business Solution (iOS)",
-    description: "Streamlines the Process of Re-Tagging Items in Response to Frequent Promotions",
-    link: "https://apps.apple.com/us/app/basic-to-do/id1662248997",
+    description:
+      "Streamlines the Process of Re-Tagging Items in Response to Frequent Promotions",
+    link: "https://github.com/mooyeon-seo/RetagEm",
     backgroundColor: "#ef0056",
   },
   {
@@ -47,7 +49,7 @@ const projects = [
     title: "Sentinel",
     category: "Volunteer Internship (iOS)",
     description: "Prototype of Parental Control App",
-    link: "",
+    link: "https://github.com/RedDevil2002/Sentinel",
     backgroundColor: "#991476",
   },
   {
@@ -55,14 +57,14 @@ const projects = [
     category: "Academic (Android)",
     description:
       "Support basic CRUD operations for notes with local persistance",
-    link: "",
+    link: "https://git.uwaterloo.ca/cs349-winter2022/m7seo",
     backgroundColor: "#ffccdd",
   },
   {
     title: "Battleship",
     category: "Academic (Android)",
     description: "A Classic Battleship Board Game with User Friendly UI",
-    link: "",
+    link: "https://github.com/RedDevil2002/Batteship",
     backgroundColor: "#e099dd",
   },
   {
@@ -78,7 +80,7 @@ const projects = [
     category: "Machine Learning (iOS)",
     description:
       "Server That Analyzes Your Messages And Posts Them on X (Twitter) With Your Sentiment Score",
-    link: "",
+    link: "https://github.com/RedDevil2002/SentimentalMirror",
     backgroundColor: "#ee44ff",
   },
 ];
@@ -92,76 +94,28 @@ const ProjectSection = styled("div")({
 const ProjectContent = styled("div")({
   height: "100%",
   display: "grid",
-  gridTemplateColumns: `${UI.businessBoxUnit} ${UI.businessBoxUnit} ${UI.businessBoxUnit}`, // Three equal-width columns
-  gridTemplateRows: `${UI.businessBoxUnit} ${UI.businessBoxUnit} ${UI.businessBoxUnit}`, // Three equal-width columns
+  gridTemplateColumns: `${UI.businessBoxUnit} ${UI.businessBoxUnit} ${UI.businessBoxUnit}`,
+  gridTemplateRows: `${UI.businessBoxUnit} ${UI.businessBoxUnit} ${UI.businessBoxUnit}`,
   alignItems: "center",
   justifyContent: "center",
   gap: UI.gap,
   padding: UI.padding,
 });
 
-const ProjectTextContainer = styled("div")({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "start",
-  padding: UI.padding,
-  gap: UI.gap,
-  color: "white",
-});
-
-const DescriptionBlock = ({ project }) => {
-  const Content = styled("div")({
-    backgroundColor: project.backgroundColor
-      ? project.backgroundColor
-      : "black",
-    borderRadius: UI.borderRadius,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "start",
-    height: "100%",
-    width: "100%",
-    gap: UI.gap,
-  });
-  return (
-    <motion.div
-      whileHover={{ scale: 1.025 }}
-      initial={{ x: 50 }}
-      whileInView={{ x: 0 }}
-      transition={{ duration: 1.2 }}
-      style={{ height: "100%", width: "100^" }}
-    >
-      <Content>
-        {project.title && (
-          <ProjectTextContainer>
-            <Typography
-              variant="h6"
-              align="center"
-              color="white"
-              fontFamily={"anton"}
-            >
-              {project.title}
-            </Typography>
-            <Typography variant="subtitle1">{project.category}</Typography>
-            <Typography variant="subtitle1">{project.description}</Typography>
-          </ProjectTextContainer>
-        )}
-      </Content>
-    </motion.div>
-  );
-};
-
 export default function Projects() {
   return (
     <ProjectSection>
       <Title title="Project" />
       <Typography variant="subtitle1">
-        
+        Click the boxes below to visit either the project, or its source code
       </Typography>
+      <Typography variant="subtitle1">
+        Some of the projects are not publicly available due to academic integrity
+      </Typography>
+
       <ProjectContent>
         {projects.map((project) => (
-          <DescriptionBlock project={project} />
+          <Project project={project} />
         ))}
       </ProjectContent>
     </ProjectSection>
