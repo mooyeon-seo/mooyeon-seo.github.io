@@ -4,5 +4,5 @@ export const UI = {
     gap: "5px",
     iconSize: 45,
     borderRadius: "20px",
-    businessBoxUnit: "25vh"
+    businessBoxUnit: "33vh"
 }
