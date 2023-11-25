@@ -33,7 +33,7 @@ export default function Project({ project }) {
       whileHover={{ scale: 1.025 }}
       initial={{ opacity: 0.65 }}
       whileInView={{ opacity: 1 }}
-      style={{ height: "100%", width: "100^" }}
+      style={{ height: "100%", width: "100%" }}
       onClick={() => navigationOnClick(project.link)}
     >
       <Content>

@@ -75,14 +75,6 @@ const projects = [
     link: "",
     backgroundColor: "#ee99dd",
   },
-  {
-    title: "Sentimental Mirror",
-    category: "Machine Learning (iOS)",
-    description:
-      "Server That Analyzes Your Messages And Posts Them on X (Twitter) With Your Sentiment Score",
-    link: "https://github.com/RedDevil2002/SentimentalMirror",
-    backgroundColor: "#ee44ff",
-  },
 ];
 
 const ProjectSection = styled("div")({
@@ -106,13 +98,6 @@ export default function Projects() {
   return (
     <ProjectSection>
       <Title title="Project" />
-      <Typography variant="subtitle1">
-        Click the boxes below to visit either the project, or its source code
-      </Typography>
-      <Typography variant="subtitle1">
-        Some of the projects are not publicly available due to academic integrity
-      </Typography>
-
       <ProjectContent>
         {projects.map((project) => (
           <Project project={project} />

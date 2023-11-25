@@ -47,7 +47,10 @@ const DescriptionBlock = ({ description }) => {
     gap: UI.gap,
   });
   return (
-    <motion.div whileHover={{ scale: 1.025 }} style={{height: "100%", width:"100^"}}>
+    <motion.div
+      whileHover={{ scale: 1.025 }}
+      style={{ height: "100%", width: "100^" }}
+    >
       <Content>
         {description.title && description.backgroundColor && (
           <Typography
@@ -80,6 +83,9 @@ export default function Business() {
   return (
     <BusinessSection>
       <Title title="Business" />
+      <Typography variant="subtitle1">
+        Currently, the website is going through major updates.
+      </Typography>
       <BusinessContent>
         <BusinessLogoContainer>
           <motion.div whileHover={{ scale: 1.025 }}>
@@ -87,11 +93,11 @@ export default function Business() {
               src="/assets/businesslogo.svg"
               alt="Raspberry Sherbet Logo"
               onClick={() => {
-                window.open("https://raspberrysherbet.ca", "_blank");
+                window.open("https://raspberrysherbet.ca/repair", "_blank");
               }}
             />
           </motion.div>
-        </BusinessLogoContainer>
+        </BusinessLogoContainer>  
         {[
           { title: "Full Stack Development", backgroundColor: "#ffcccc" },
           { title: "Digital Marketing", backgroundColor: "#cf838d" },
