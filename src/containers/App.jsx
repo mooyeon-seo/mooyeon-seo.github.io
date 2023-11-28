@@ -27,7 +27,6 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Hero />
-      <Business />
       <Projects />
       <Educations />
       <Works />
