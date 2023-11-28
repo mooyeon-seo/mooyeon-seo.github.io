@@ -94,11 +94,25 @@ const ProjectContent = styled("div")({
   padding: UI.padding,
 });
 
+const BusinessLogo = styled("img")({
+  maxWidth: "100%",
+  height: "auto",
+  objectFit: "contain",
+  borderRadius: "20px",
+});
+
 export default function Projects() {
   return (
     <ProjectSection>
       <Title title="Project" />
       <ProjectContent>
+      <BusinessLogo
+              src="/assets/businesslogo.svg"
+              alt="Raspberry Sherbet Logo"
+              onClick={() => {
+                window.open("https://raspberrysherbet.ca/repair", "_blank");
+              }}
+            />
         {projects.map((project) => (
           <Project project={project} />
         ))}
