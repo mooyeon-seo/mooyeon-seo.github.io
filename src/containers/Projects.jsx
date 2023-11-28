@@ -106,13 +106,13 @@ export default function Projects() {
     <ProjectSection>
       <Title title="Project" />
       <ProjectContent>
-      <BusinessLogo
-              src="/assets/businesslogo.svg"
-              alt="Raspberry Sherbet Logo"
-              onClick={() => {
-                window.open("https://raspberrysherbet.ca/repair", "_blank");
-              }}
-            />
+        <BusinessLogo
+          src="/assets/businesslogo.svg"
+          alt="Raspberry Sherbet Logo"
+          onClick={() => {
+            window.open("https://raspberrysherbet.ca/repair", "_blank");
+          }}
+        />
         {projects.map((project) => (
           <Project project={project} />
         ))}
