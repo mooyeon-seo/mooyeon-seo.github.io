@@ -48,8 +48,8 @@
         {
             "id": "3",
             "title": "Moophoria",
-            "description": "Full-Stack Web Development",
-            "imageSrc": "https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+            "description": "Audio-based Social Media Platform",
+            "imageSrc": "/project_assets/moophoria.png",
             "url": "https://moophoria.ca/"
         }
     ],
