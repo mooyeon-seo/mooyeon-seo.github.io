@@ -2,8 +2,8 @@
     "name": "Brian",
     "headerTaglineOne": "Hello 👋",
     "headerTaglineTwo": "My name is Brian",
-    "headerTaglineThree": "Software Engineer",
-    "headerTaglineFour": " based in Seoul, South Korea.",
+    "headerTaglineThree": "Full-Stack Developer",
+    "headerTaglineFour": "University of Waterloo 🇨🇦 ",
     "showCursor": true,
     "showBlog": true,
     "darkMode": true,
@@ -33,15 +33,15 @@
     "projects": [
         {
             "id": "1",
-            "title": "System calls and virtual memory",
-            "description": "Operating System Kernel Development",
+            "title": "OS/161 Kernel",
+            "description": "System Calls & Virtual Memory",
             "imageSrc": "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60",
             "url": "https://moophoria.ca/"
         },
         {
             "id": "2",
             "title": "C Compiler",
-            "description": "Compiler Development",
+            "description": "Lexical Analysis, Parsing and MIPS Executable Generation",
             "imageSrc": "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
             "url": "https://moophoria.ca/"
         },
@@ -57,22 +57,22 @@
         {
             "id": "1",
             "title": "Full-Stack Web Development",
-            "description": "We specialize in building scalable, user-centric web applications using modern frameworks like Next.js and TypeScript, ensuring seamless performance and engaging user experiences."
+            "description": "I specialize in building scalable, user-centric web applications using modern frameworks like Next.js and TypeScript, ensuring seamless performance and engaging user experiences."
         },
         {
             "id": "2",
             "title": "Cloud Architecture & Deployment",
-            "description": "We design and implement robust cloud solutions using AWS services such as S3, EC2, and Lambda, enabling secure, efficient, and scalable infrastructure for your applications."
+            "description": "I design and implement robust cloud solutions using AWS services such as S3, EC2, and Lambda, enabling secure, efficient, and scalable infrastructure"
         },
         {
             "id": "3",
             "title": "Authentication & Security",
-            "description": "We implement secure authentication systems using OAuth, NextAuth, and JWTs, ensuring a seamless and safe login experience for users."
+            "description": "I implement secure authentication systems using OAuth, NextAuth, and JWTs, ensuring a seamless and safe login experience for users."
         },
         {
             "id": "4",
             "title": "3D Web Experiences",
-            "description": "We create interactive 3D visuals and animations with Three.js, adding a 'wow' factor to your web applications and enhancing user engagement."
+            "description": "I create interactive 3D visuals and animations with Three.js, enhancing user engagement."
         }
     ],
     "aboutpara": "I am a results-driven software engineer with expertise in TypeScript, Next.js, and AWS, specializing in building scalable web applications. In my latest project, Moophoria, I implemented features like audio recording, OAuth authentication, and AWS S3 integration, enhancing user engagement.  With a Computer Science degree from the University of Waterloo, I am expanding my skills in Java (Spring) and 3D web development (Three.js) to tackle future challenges. I thrive in collaborative environments, driving technical innovation and delivering impactful solutions.",
