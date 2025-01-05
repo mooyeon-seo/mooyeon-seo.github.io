@@ -3,7 +3,7 @@
     "headerTaglineOne": "Hello 👋",
     "headerTaglineTwo": "My name is Brian",
     "headerTaglineThree": "Full-Stack Developer",
-    "headerTaglineFour": "University of Waterloo 🇨🇦 ",
+    "headerTaglineFour": "UWaterloo Alumni 2022 🇨🇦 ",
     "showCursor": true,
     "showBlog": true,
     "darkMode": true,
@@ -57,11 +57,11 @@
         {
             "id": "1",
             "title": "Full-Stack Web Development",
-            "description": "I specialize in building scalable, user-centric web applications using modern frameworks like Next.js and TypeScript, ensuring seamless performance and engaging user experiences."
+            "description": "I specialize in building scalable, user-centric web applications using modern frameworks like Next.js, Django and Spring, ensuring seamless performance and engaging user experiences."
         },
         {
             "id": "2",
-            "title": "Cloud Architecture & Deployment",
+            "title": "CI/CD & Cloud Infrastructure",
             "description": "I design and implement robust cloud solutions using AWS services such as S3, EC2, and Lambda, enabling secure, efficient, and scalable infrastructure"
         },
         {
