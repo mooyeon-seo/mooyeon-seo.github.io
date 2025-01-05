@@ -1,0 +1,126 @@
+{
+    "name": "Brian",
+    "headerTaglineOne": "Hello 👋",
+    "headerTaglineTwo": "My name is Brian",
+    "headerTaglineThree": "Software Engineer",
+    "headerTaglineFour": " based in Seoul, South Korea.",
+    "showCursor": true,
+    "showBlog": true,
+    "darkMode": true,
+    "showResume": true,
+    "socials": [
+        {
+            "id": "1",
+            "title": "Github",
+            "link": "https://github.com/mooyeon-seo"
+        },
+        {
+            "id": "2",
+            "title": "LinkedIn",
+            "link": "https://www.linkedin.com/in/brian-seo-316aa71b5/"
+        },
+        {
+            "id": "3",
+            "title": "Blog",
+            "link": "https://www.moophoria.ca/blog"
+        },
+        {
+            "id": "4",
+            "title": "Email",
+            "link": "mailto:mooyeon.dev@gmail.com"
+        }
+    ],
+    "projects": [
+        {
+            "id": "1",
+            "title": "System calls and virtual memory",
+            "description": "Operating System Kernel Development",
+            "imageSrc": "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60",
+            "url": "http://chetanverma.com/"
+        },
+        {
+            "id": "2",
+            "title": "C Compiler",
+            "description": "Compiler Development",
+            "imageSrc": "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+            "url": "http://chetanverma.com/"
+        },
+        {
+            "id": "3",
+            "title": "Moophoria",
+            "description": "Full-Stack Web Development",
+            "imageSrc": "https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+            "url": "http://chetanverma.com/"
+        }
+    ],
+    "services": [
+        {
+            "id": "1",
+            "title": "Full-Stack Web Development",
+            "description": "We specialize in building scalable, user-centric web applications using modern frameworks like Next.js and TypeScript, ensuring seamless performance and engaging user experiences."
+        },
+        {
+            "id": "2",
+            "title": "Cloud Architecture & Deployment",
+            "description": "We design and implement robust cloud solutions using AWS services such as S3, EC2, and Lambda, enabling secure, efficient, and scalable infrastructure for your applications."
+        },
+        {
+            "id": "3",
+            "title": "Authentication & Security",
+            "description": "We implement secure authentication systems using OAuth, NextAuth, and JWTs, ensuring a seamless and safe login experience for users."
+        },
+        {
+            "id": "4",
+            "title": "3D Web Experiences",
+            "description": "We create interactive 3D visuals and animations with Three.js, adding a 'wow' factor to your web applications and enhancing user engagement."
+        }
+    ],
+    "aboutpara": "I am a results-driven software engineer with expertise in TypeScript, Next.js, and AWS, specializing in building scalable web applications. In my latest project, Moophoria, I implemented features like audio recording, OAuth authentication, and AWS S3 integration, enhancing user engagement.  With a Computer Science degree from the University of Waterloo, I am expanding my skills in Java (Spring) and 3D web development (Three.js) to tackle future challenges. I thrive in collaborative environments, driving technical innovation and delivering impactful solutions.",
+    "resume": {
+        "tagline": "🚀 Software Engineer with a Bachelor’s degree in Computer Science from the University of Waterloo",
+        "description": "Experienced in building scalable APIs, optimizing cloud deployments, and passionate about building efficient systems and contributing to impactful projects using TypeScript, AWS, and Docker. \n",
+        "experiences": [
+            {
+                "id": "1",
+                "dates": "September 2023 - Present",
+                "type": "Full Time",
+                "position": "Software Engineer at DatacrunchGlobal",
+                "bullets": "Automated AWS EC2 deployment processes with Docker and GitHub Actions, Optimized back-end API endpoints reducing processing time by 25% for large-scale financial datasets, Led the migration of development infrastructure including domain transfers EC2 instances and RDS databases"
+            },
+            {
+                "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
+                "dates": "July 2017 - April 2019",
+                "type": "Full Time",
+                "position": "Staff Sergeant at Republic of Korea Army",
+                "bullets": "Produced and delivered detailed intelligence reports to division headquarters from North Korean bases within the Korean DMZ, Demonstrated leadership and strategic planning skills fostering collaboration under high-pressure conditions—qualities transferable to cross-functional software teams."
+            }
+        ],
+        "education": {
+            "universityName": "University of Waterloo",
+            "universityDate": "2016-2022",
+            "universityPara": "I graduated with a Bachelor of Computer Science degree from the University of Waterloo. I was on the Dean's Honours List and graduated with distinction."
+        },
+        "languages": [
+            "Python",
+            "Typescript",
+            "Javascript",
+            "HTML5",
+            "CSS",
+            "Bash"
+        ],
+        "frameworks": [
+            "Django", "Django Rest Framework", "React", "Next.js", "Redux"
+        ],
+        "others": [
+            "Figma",
+            "Docker",
+            "Git",
+            "Jira",
+            "AWS EC2",
+            "AWS S3",
+            "AWS Lambda",
+            "AWS RDS",
+            "OAuth"
+        ]
+    }
+}
