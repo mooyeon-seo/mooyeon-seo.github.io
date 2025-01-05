@@ -27,7 +27,7 @@ const Button = ({ children, type, onClick, classes }) => {
         theme === "dark"
           ? "hover:bg-slate-600 text-white"
           : "hover:bg-slate-100"
-      } hover:-translate-y-0.5 active:scale-100  tablet:first:ml-0  ${
+      } hover:-translate-y-0.5 active:scale-100 tablet:first:ml-0 p-1  ${
         data.showCursor && "cursor-none"
       } ${classes} link`}
     >
