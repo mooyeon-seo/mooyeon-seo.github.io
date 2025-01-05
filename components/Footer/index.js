@@ -10,12 +10,12 @@ const Footer = ({ }) => {
         <div>
           <h1 className="text-2xl text-bold">Contact</h1>
           <div className="mt-10">
-            <h1 className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
-              LET&apos;S WORK
-            </h1>
-            <h1 className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
-              TOGETHER
-            </h1>
+            <h2 className="text-3xl tablet:text-4xl laptop:text-5xl laptopl:text-5xl text-bold mb-3">
+              DO YOU WANT ME TO
+            </h2>
+            <h2 className="text-3xl tablet:text-4xl laptop:text-5xl laptopl:text-5xl text-bold">
+              JOIN YOUR TEAM? 🚀
+            </h2>
             <Button type="primary">
               <Link href={"mailto:mooyeon.dev@gmail.com"}>
                 Shoot me an email ❤
