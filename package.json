@@ -1,8 +1,8 @@
 {
   "name": "react-portfolio-template",
   "version": "3.0",
-  "private": true,
-  "homepage": "https://mooyeon-seo.github.io",
+  "homepage": "https://mooyeon-seo.github.io/mooyeon-seo.github.io",
+  "private": true,  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
