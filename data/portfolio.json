@@ -36,14 +36,14 @@
             "title": "OS/161 Kernel",
             "description": "System Calls & Virtual Memory",
             "imageSrc": "/project_assets/os161.png",
-            "url": "https://moophoria.ca/"
+            "url": "/projects/os161"
         },
         {
             "id": "2",
             "title": "C Compiler",
             "description": "Lexical Analysis, Parsing and MIPS Executable Generation",
             "imageSrc": "/project_assets/compiler.jpg",
-            "url": "https://moophoria.ca/"
+            "url": "/projects/compiler"
         },
         {
             "id": "3",
