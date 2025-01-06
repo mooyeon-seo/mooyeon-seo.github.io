@@ -94,9 +94,18 @@ export default function Home() {
           <Socials className="mt-2 laptop:mt-5" />
         </div>
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
+        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
+          <h1 className="text-2xl text-bold">About</h1>
+          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+          I am a results-driven software engineer with expertise in TypeScript, Next.js, and AWS, specializing in building scalable web applications. In my latest project, Moophoria, I implemented features like audio recording, OAuth authentication, and AWS S3 integration, enhancing user engagement.
+          </p>
+          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+          I am expanding my skills in Java (Spring) and 3D web development (Three.js) to tackle future challenges. I thrive in collaborative environments, driving technical innovation and delivering impactful solutions.
+          </p>
+        </div>
           <h1 className="text-2xl text-bold">Projects</h1>
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-4 gap-4">
+          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {data.projects.map((project) => (
               <WorkCard
                 key={project.id}
@@ -108,7 +117,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
+        {/* <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
           <h1 className="text-2xl text-bold">How I can contribute to your team</h1>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (
@@ -119,8 +128,8 @@ export default function Home() {
               />
             ))}
           </div>
-        </div>
-        <Footer />
+        </div> */}
+        {/* <Footer /> */}
         {/* This button should not go into production */}
         {process.env.NODE_ENV === "development" && (
           <div className="fixed bottom-5 right-5">
@@ -129,15 +138,7 @@ export default function Home() {
             </Link>
           </div>
         )}
-        {/* <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="text-2xl text-bold">About</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-          I am a results-driven software engineer with expertise in TypeScript, Next.js, and AWS, specializing in building scalable web applications. In my latest project, Moophoria, I implemented features like audio recording, OAuth authentication, and AWS S3 integration, enhancing user engagement.
-          </p>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-          With a Computer Science degree from the University of Waterloo, I am expanding my skills in Java (Spring) and 3D web development (Three.js) to tackle future challenges. I thrive in collaborative environments, driving technical innovation and delivering impactful solutions.
-          </p>
-        </div> */}
+        
         
       </div>
     </div>
