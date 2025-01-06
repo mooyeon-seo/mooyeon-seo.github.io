@@ -105,7 +105,7 @@ export default function Home() {
         </div>
           <h1 className="text-2xl text-bold">Projects</h1>
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-4 gap-4">
             {data.projects.map((project) => (
               <WorkCard
                 key={project.id}

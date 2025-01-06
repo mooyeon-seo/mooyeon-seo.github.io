@@ -11,21 +11,21 @@ const WorkCard = ({ img, name, description, url }) => {
         style={{ height: "600px" }}
       >
         <Link href={url}>
-        <Image
-          alt={name}
-          className="rounded-lg w-full h-full overflow-hidden"
-          src={img}
-          width={1024}
-          height={1024}
-        ></Image>
+          <Image
+            alt={name}
+            className="rounded-lg overflow-hidden"
+            src={img}
+            width={1024}
+            height={1024}
+          ></Image>
         </Link>
+        <h1 className="mt-3 text-3xl font-medium">
+          {name ? name : "Project Name"}
+        </h1>
+        <h2 className="text-xl opacity-50">
+          {description ? description : "Description"}
+        </h2>
       </div>
-      <h1 className="mt-5 text-3xl font-medium">
-        {name ? name : "Project Name"}
-      </h1>
-      <h2 className="text-xl opacity-50">
-        {description ? description : "Description"}
-      </h2>
     </div>
   );
 };
