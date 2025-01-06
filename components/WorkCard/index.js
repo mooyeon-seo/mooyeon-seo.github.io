@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 const WorkCard = ({ img, name, description, url }) => {
   return (
     <div
@@ -10,11 +11,13 @@ const WorkCard = ({ img, name, description, url }) => {
         style={{ height: "600px" }}
       >
         <Link href={url}>
-        <img
+        <Image
           alt={name}
           className="rounded-lg w-full h-full overflow-hidden"
           src={img}
-        ></img>
+          width={1024}
+          height={1024}
+        ></Image>
         </Link>
       </div>
       <h1 className="mt-5 text-3xl font-medium">

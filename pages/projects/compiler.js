@@ -89,7 +89,7 @@ mips.twoints final.mips`}
                 <section className="mb-8">
                     <h2 className="text-2xl font-semibold text-gray-800">Code Generation</h2>
                     <p className="text-gray-700 mt-4">
-                        The compiler's final phase translates the Abstract Syntax Tree (AST) into MIPS assembly. Below is an example handling arithmetic expressions:
+                        {"The compiler's final phase translates the Abstract Syntax Tree (AST) into MIPS assembly. Below is an example handling arithmetic expressions:"}
                     </p>
                     <SyntaxHighlighter language="cpp" style={vscDarkPlus}>
                         {`if (node->value == "PLUS") {
@@ -143,7 +143,7 @@ mips.twoints final.mips`}
                         <li><b>Code Generator</b>: Produces optimized MIPS assembly for execution.</li>
                     </ul>
                     <p className="text-gray-700 mt-4">
-                        Future plans include extending the compiler's functionality and testing in a broader environment.
+                        {"Future plans include extending the compiler's functionality and testing in a broader environment."}
                     </p>
                 </section>
 

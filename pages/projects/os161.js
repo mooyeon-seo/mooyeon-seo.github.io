@@ -119,7 +119,7 @@ const OS161ProjectPage = () => {
                     </p>
                     <ul className="list-disc list-inside text-gray-700">
                         <li><b>Page Table Lookup</b>: Checks if the page is already loaded.</li>
-                        <li><b>Demand Paging</b>: Allocates memory for a page if it's not found in the table.</li>
+                        <li><b>Demand Paging</b>{": Allocates memory for a page if it's not found in the table."}</li>
                         <li><b>TLB Management</b>: Inserts the physical address into the TLB for fast future access.</li>
                     </ul>
                 </section>
