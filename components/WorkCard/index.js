@@ -7,12 +7,12 @@ const WorkCard = ({ img, name, description, onClick }) => {
       onClick={onClick}
     >
       <div
-        className="relative overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto rounded-lg"
+        className="relative overflow-hidden h-48 mob:h-auto"
         style={{ height: "600px" }}
       >
         <img
           alt={name}
-          className="rounded-lg"
+          className="rounded-lg w-full h-full overflow-hidden"
           src={img}
         ></img>
       </div>
